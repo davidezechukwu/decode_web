@@ -1,0 +1,22 @@
+# Ignore artifacts
+
+.eslintrc.js
+scratch/**
+.next/**
+.vs/**
+.vscode/**
+bin
+build
+coverage
+node_modules
+.env*
+next*.*
+package.json
+README.md
+**/README.md
+*.njsproj
+*.njsproj.user
+vercel.json
+web.config
+tsconfig.json
+next.config.js

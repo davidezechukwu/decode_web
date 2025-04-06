@@ -1,0 +1,43 @@
+trigger:
+- master
+
+variables:  
+  azureSubscription: 'YourAzureSubscriptionName'  
+
+pool:
+  name: YourBuildAgentPool-which-can-be-run-on-the-same-vm
+
+   
+stages:
+- stage: Build
+  displayName: Build stage
+  jobs:  
+  - job: Build
+    displayName: Build
+    steps:
+    - task: CopyFilesOverSSH@0
+      inputs:
+        sshEndpoint: 'decodeonline-ssh'
+        sourceFolder: '$(System.DefaultWorkingDirectory)'
+        contents: |
+          **
+          !node_modules/**
+          !.git/**
+        targetFolder: '/opt/decode/web/www'
+        cleanTargetFolder: false
+        cleanHiddenFilesInTarget: false
+        readyTimeout: '20000'
+    - task: SSH@0
+      inputs:
+        sshEndpoint: 'decodeonline-ssh'
+        runOptions: 'inline'
+        inline: |
+          cd /opt/decode/web/www          
+          NPM_TOKEN=YourNPMToken
+          npm install
+          npm run build          
+          pm2 start ecosystem.config.js --env production 
+          echo "Restarting Nginx..." 
+          sudo systemctl restart nginx 
+        readyTimeout: '20000'
+        failOnStdErr:  false

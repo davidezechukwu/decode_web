@@ -1,0 +1,2879 @@
+@use "sass:math";
+@use "sass:list";
+
+/*media breakpoints for screen*/
+.sample media breakpoints {
+
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  @media only screen and (min-width: 540px) {
+    .aclass {
+      transition: none;
+    }
+  }
+
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media only screen and (min-width: 720px) {
+    .aclass {
+      transition: none;
+    }
+  }
+
+  /* Large devices (laptops/desktops, 992px and up) */
+  @media only screen and (min-width: 960px) {
+    .aclass {
+      transition: none;
+    }
+  }
+
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+  @media only screen and (min-width: 1140px) {
+    .aclass {
+      transition: none;
+    }
+  }
+
+  /* Panaromic devices (ultrawide 1200px and up) */
+  @media only screen and (min-width: 1320px) {
+    .aclass {
+      transition: none;
+    }
+  }
+}
+
+/**********************************************************************************************************************************************************************/
+/*                                                              FONTS                                                                                                 */
+/*                                                                                                                                                                    */
+/**********************************************************************************************************************************************************************/
+$pkform-font-family: Arial, Helvetica, sans-serif;
+$pkh1-font-family: 'Poppins', Arial, Helvetica, sans-serif;
+$pkh2-font-family: 'Poppins', Arial, Helvetica, sans-serif;
+$pkh3-font-family: Arial, Helvetica, sans-serif;
+
+
+
+
+/**********************************************************************************************************************************************************************/
+/*                                                              VARIABLES                                                                                             */
+/*                                                                                                                                                                    */
+/**********************************************************************************************************************************************************************/
+/*fonts*/
+$pkmain-font-family: Arial, Helvetica, sans-serif;
+
+/*body*/
+$pkbody-background-color: #146;
+
+/*content text color*/
+$pkprimary-color: #ff9933;
+$pksecondary-color: #888;
+$pkmain-content-color: #fff;
+$pk-line-color: #888;
+
+/*main menu*/
+$pknav-a-color: #1369eb;
+$pknav-a-color-hover: #0065E2;
+$pknav-a-background-color-hover: #CFD8DC;
+$pknav-a-color-active: #039be5;
+
+/*breadcrumbs*/
+$pkbreadcrumb-color: $pkprimary-color;
+
+/*error*/
+$pkerror-color: #f31700;
+
+/*Headers*/
+$pkh1-color: #e0e0f0;
+
+/*main content*/
+$pkmain-content-background-color: rgba(0, 0, 0, 0.8);
+$pkmain-content-h2-color: #ffffff;
+$pkmain-content-h3-color: $pkprimary-color;
+$pkmain-content-h4-color: $pkprimary-color;
+$pkmain-content-label-color: $pkprimary-color;
+
+/*button*/
+$pkbutton-color: $pkprimary-color;
+$pkbutton-color-hover: yellow;
+$pkbutton-background-color-0: transparent;
+$pkbutton-background-color-1: #111111;
+$pkbutton-background-color-2: #1F1F1F;
+$pkbutton-background-color-3: #111111;
+$pkbutton-border-color: $pkprimary-color;
+$pkbutton-border-color-hover: $pkprimary-color;
+
+/*Light Theme*/
+$pklight-background-color-for-filter: rgba(0, 0, 0, 0.90);
+$pklight-pkprimary-color: #fff;
+$pklight-pkmain-content-color: #fff;
+$pklight-pkh1-color: #e0e0f0;
+$pklight-pkmain-content-background-color: rgba(30, 80, 155, 0.3);
+$pklight-pkbutton-border-color: $pklight-pkprimary-color;
+$pklight-pkbutton-border-color-hover: $pklight-pkprimary-color;
+$pklight-pkbutton-color: $pklight-pkprimary-color;
+$pklight-pkbutton-color-hover: #9ef;
+$pklight-pkbutton-background-color-1: #11006f;
+$pklight-pkbutton-background-color-2: #00102f;
+$pklight-pkbutton-background-color-3: #00004F;
+$pklight-pkbutton-border-color: $pklight-pkprimary-color;
+$pklight-pkbutton-border-color-hover: $pklight-pkprimary-color;
+$pklight-pknav-a-color: #fff;
+$pklight-pknav-a-color-hover: #cdf;
+$pklight-line-color: #fff;
+
+/*Neutral Theme*/
+$pkneutral-pkbody-background-color: #fff;
+$pkneutral-pknav-a-color-hover: rgb(133, 168, 238);
+$pkneutral-pkprimary-color: #00f;
+$pkneutral-pkmain-content-color: #222;
+$pkneutral-pkhint-color: #888;
+$pkneutral-pkbutton-color: #ffff;
+$pkneutral-pkbutton-color-hover: #ffff;
+$pkneutral-pkbutton-border-color: #0d5eed;
+$pkneutral-pkbutton-border-color-hover: #00f;
+$pkneutral-pkbutton-background-color-0: #0d6efd;
+$pkneutral-pkbutton-background-color-1: #0065E2;
+$pkneutral-pkbutton-background-color-2: #3300f2;
+$pkneutral-pkbutton-background-color-3: #0078D4;
+$pkneutral-pkh1-color: #000;
+$pkneutral-pkmain-content-background-color: rgba(255, 255, 255);
+$pkneutral-line-color: #228;
+
+
+
+/**********************************************************************************************************************************************************************/
+/*                                                              KENDO VARIABLE OVERRIDES                                                                              */
+/*                                                                                                                                                                    */
+/**********************************************************************************************************************************************************************/
+//$kendo-expander-title-text: green;
+
+
+
+
+/**********************************************************************************************************************************************************************/
+/*                                                              SUSPENSE                                                                                              */
+/*                                                                                                                                                                    */
+/**********************************************************************************************************************************************************************/
+.pksususpensecomponent {
+  transform: translateZ(0) scale(1);
+  backface-visibility: hidden;
+  transform-origin: 0 0;
+  background-color: rgba(0, 0, 0, 0.2);  
+  // display: flex; 
+  // justify-content: center; 
+  // align-items: center; 
+  // width: 100%;
+  // height: 100%;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+
+  .pksususpensespinnercontainer {
+    top: 50%;
+    left: 50%;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    display: inline-block;
+    overflow: hidden;
+    background: rgba(100, 0, 100, 0.5);
+    z-index: 1000;
+    transform: translate(-50%, -50%)
+  }
+
+  @keyframes pksususpensespinnercontainer {
+    0% {
+      opacity: 1
+    }
+
+    50% {
+      opacity: .5
+    }
+
+    100% {
+      opacity: 1
+    }
+  }
+
+  .pksususpensespinnercontainer div {
+    position: absolute;
+    width: 20px;
+    height: 80px;
+    top: 60px;
+    animation: pksususpensespinnercontainer 1s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  }
+
+  .pksususpensespinnercontainer div:nth-of-type(1) {
+    transform: translate(30px, 0);
+    background: #e15b64;
+    animation-delay: -0.6s;
+  }
+
+  .pksususpensespinnercontainer div:nth-of-type(2) {
+    transform: translate(70px, 0);
+    background: #f47e60;
+    animation-delay: -0.4s;
+  }
+
+  .pksususpensespinnercontainer div:nth-of-type(3) {
+    transform: translate(110px, 0);
+    background: #f8b26a;
+    animation-delay: -0.2s;
+  }
+
+  .pksususpensespinnercontainer div:nth-of-type(4) {
+    transform: translate(150px, 0);
+    background: #abbd81;
+    animation-delay: -1s;
+  }
+  
+  .pksususpensespinnercontainer div {
+    box-sizing: content-box;
+  }
+}
+
+
+
+
+/**********************************************************************************************************************************************************************/
+/*                                                              HTML                                                                                                  */
+/*                                                                                                                                                                    */
+/**********************************************************************************************************************************************************************/
+.html {
+  font-size: 16px;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0; 
+}
+
+
+
+.html[dir="rtl"] {
+  img[x-magic="magical"] {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+  }
+
+  .pkpagelinkcontainer{
+    justify-content: flex-end !important;
+  }
+}
+
+// // @media only screen and (max-width: 750) {
+// //   .html {
+// //     font-size: 30px;
+// //   }
+// // }
+
+// @media (max-width: 999px) {
+//   .html {
+//     font-size: 10px;
+//   }
+
+//   .selector:not(*:root){
+//     .html {
+//       font-size: 20px !important;
+//     }    
+//   }  
+// }
+
+// /* Chrome 29+ */
+// @media screen and (-webkit-min-device-pixel-ratio:0) and  (max-width: 999px)  and (min-resolution:.001dpcm) and (max-width: 1199px) {
+//   .html {
+//     font-size: 20px !important;
+//   }
+//   .pkbody{
+//     font-size: 20px !important;
+//   } 
+// }
+
+// /* Chrome version 29 and above */
+// @media screen and (-webkit-min-device-pixel-ratio:0) and (min-resolution:.001dpcm) and (max-width: 1199px){
+//   .html {
+//     font-size: 20px !important;
+//   } 
+//   .pkbody{
+//     font-size: 20px !important;
+//   }
+// }
+
+// @-moz-document url-prefix() {
+//   .html {
+//     font-size: 16px !important;
+//   }
+//   .pkbody{
+//     font-size: 16px !important;
+//   } 
+// }
+
+/**********************************************************************************************************************************************************************/
+/*                                                              BODY                                                                                                  */
+/*                                                                                                                                                                    */
+/**********************************************************************************************************************************************************************/
+.pkbody{
+  //font-size: 16px;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  touch-action:  pan-y;
+}
+
+.pkbody {
+  background-color: $pkbody-background-color;
+}
+
+// @media only screen and (max-width: 999px) and (max-width: 1199px) {
+//   .html {
+//     font-size: 10px !important;
+//   }
+// }
+// @media only screen and (min-width: 999px) and (min-width: 1200px) {
+//   .html {
+//     font-size: 16px !important;
+//   }
+// }
+
+
+
+
+/**********************************************************************************************************************************************************************/
+/*                                                              CONTAINER                                                                                             */
+/*                                                                                                                                                                    */
+/**********************************************************************************************************************************************************************/
+@media only screen and (max-width: 999px) {
+  .pkcontainer {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto;
+    padding: 0;
+    margin: 0;
+  }
+
+  .pkpagelinkcontainer {
+    gap: 0.5rem;
+
+    h5 {
+      width: 27rem;
+      padding: 1rem 0.5rem;
+    }
+
+    img {
+      margin: 0 0.25rem;
+    }
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .pkcontainer {
+    max-width: 800px !important;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .pkcontainer {
+    max-width: 800px !important;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .pkcontainer {
+    max-width: 950px !important;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .pkcontainer {
+    max-width: 1200px !important;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .pkcontainer {
+    max-width: 1350px !important;
+  }
+}
+
+@media only screen and (min-width: 1800px) {
+  .pkcontainer {
+    max-width: 1500px !important;
+  }
+}
+
+@media only screen and (min-width: 2000px) {
+  .pkcontainer {
+    max-width: 1750px !important;
+  }
+}
+
+@media only screen and (min-width: 2200px) {
+  .pkcontainer {
+    max-width: 1900px !important;
+  }
+}
+
+@media only screen and (min-width: 2400px) {
+  .pkcontainer {
+    max-width: 2050px !important;
+  }
+}
+
+@media only screen and (min-width: 2600px) {
+  .pkcontainer {
+    max-width: 2200px !important;
+  }
+}
+
+@media only screen and (min-width: 2800px) {
+  .pkcontainer {
+    max-width: 2350px !important;
+  }
+}
+
+@media only screen and (min-width: 3000px) {
+  .pkcontainer {
+    max-width: 2500px !important;
+  }
+}
+
+@media only screen and (min-width: 3200px) {
+  .pkcontainer {
+    max-width: 2750px !important;
+  }
+}
+
+@media only screen and (min-width: 3200px) {
+  .pkcontainer {
+    max-width: 2650px !important;
+  }
+}
+
+@media only screen and (min-width: 3400px) {
+  .pkcontainer {
+    max-width: 2850px !important;
+  }
+}
+
+@media only screen and (min-width: 3600px) {
+  .pkcontainer {
+    max-width: 3000px !important;
+  }
+}
+
+
+
+
+/**********************************************************************************************************************************************************************/
+/*                                                              MAIN                                                                                                  */
+/*                                                                                                                                                                    */
+/**********************************************************************************************************************************************************************/
+.pkmain {
+  word-wrap: break-word;
+  padding: 0;
+  color: $pksecondary-color;
+  background-color: $pkmain-content-background-color;
+
+  @keyframes blinkingborder {
+    50% {
+      border-color: $pkprimary-color;
+    }
+  }
+
+  input[type='checkbox']:focus {
+    border-color: transparent;
+    border-style: solid;
+    border-width: 3px;
+  }
+  
+  input[type='checkbox']:focus {
+    border-color: orangered;        
+    animation-name: blinkingborder;
+    animation-duration: 1s;
+    animation-iteration-count: 100;
+  }
+
+  input[type='text'],
+  input[type='email'],
+  input[type='number'],
+  input[type='url'],
+  input[type='search'],
+  input[type='tel'],
+  input[type='password'],
+  textarea {
+    border-width: 2px;
+    border-color: transparent;
+  }
+
+  input[type='text']:focus,
+  input[type='email']:focus,
+  input[type='number']:focus,
+  input[type='url']:focus,
+  input[type='search']:focus,
+  input[type='tel']:focus,
+  input[type='password']:focus,
+  textarea:focus {
+    border: $pkprimary-color;
+    border-style: solid;
+    border-width: 2px;
+    animation-name: blinkingborder;
+    animation-duration: 1s;
+    animation-iteration-count: 100;
+  }
+
+  label {
+    color: $pkmain-content-label-color;
+  }
+
+  h1,
+  .pkh1 {
+    color: $pkh1-color;
+    font-size: 1.8rem;
+  }
+
+}
+
+
+
+
+/**********************************************************************************************************************************************************************/
+/*                                                              BUTTON                                                                                                */
+/*                                                                                                                                                                    */
+/**********************************************************************************************************************************************************************/
+.pkbutton {
+  border: unset;
+  vertical-align: text-top;
+  display: inline-block;
+  text-align: center;
+  white-space: nowrap;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-family: "Poppins", Arial, Helvetica, sans-serif !important;
+  font-size: 2rem;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0;
+  border-color: $pkbutton-border-color;
+  border-width: 1px;
+  border-style: solid;
+  background-color: $pkbutton-background-color-0;
+  color: $pkbutton-color;
+  cursor: pointer;
+  margin-right: 1rem;
+}
+
+.pkbutton:hover {
+  color: $pkbutton-color-hover;
+  text-decoration: underline;
+  border-style: outset;
+  border-color: $pkbutton-border-color;
+  background-color: $pkbutton-background-color-2;
+  background: -webkit-linear-gradient(-180deg, $pkbutton-background-color-1, $pkbutton-background-color-2, $pkbutton-background-color-3);
+  background: -o-linear-gradient(-180deg, $pkbutton-background-color-1, $pkbutton-background-color-2, $pkbutton-background-color-3);
+  background: -moz-linear-gradient(-180deg, $pkbutton-background-color-1, $pkbutton-background-color-2, $pkbutton-background-color-3);
+  background: linear-gradient(-180deg, $pkbutton-background-color-1, $pkbutton-background-color-2, $pkbutton-background-color-3);
+}
+
+.pkbuttoncontainer {
+  display: flex;
+}
+
+.pkbuttontypebutton {
+  color: #ffff !important;
+  border-color: #0d5eed !important;
+  background-color: #0d6efd !important;
+}
+
+.pkbuttontypebutton:hover {
+  color: #ffff !important;
+  border-color: #0088FF !important;
+  background-color: #137eff !important;
+  background: -webkit-linear-gradient(-180deg, #0065E2, #3300f2, #0078D4);
+  background: -o-linear-gradient(-180deg, #0065E2, #3300f2, #0078D4);
+  background: -moz-linear-gradient(-180deg, #0065E2, #3300f2, #0078D4);
+  background: linear-gradient(-180deg, #0065E2, #3300f2, #0078D4);
+}
+
+
+
+
+/**********************************************************************************************************************************************************************/
+/*                                                              BACKGROUND VIDEO                                                                                      */
+/*                                                                                                                                                                    */
+/**********************************************************************************************************************************************************************/
+.pkfullscreenbackground {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -100;
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .pkfullscreenbackgroundvideo {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-aspect-ratio: 16/9) {
+  .pkfullscreenbackgroundvideo {
+    width: auto;
+    height: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .pkfullscreen-background {
+    display: none;
+  }
+}
+
+.pkfullscreenbackgroundvideo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: auto;
+  height: auto;
+  min-width: 100%;
+  min-height: 100%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.pkdontshowbackgroundvideo {
+  figure {
+    video {
+      display: none !important;
+    }
+  }
+}
+
+
+
+
+/**********************************************************************************************************************************************************************/
+/*                                                              BUBBLES                                                                                                 */
+/*                                                                                                                                                                    */
+/**********************************************************************************************************************************************************************/
+.pkbubblecontainer {
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: -1000;
+  
+  $bubble-colors-list: (orange, brown, red, yellow, pink, silver, cyan, lavender, lightblue );
+  $random-index: math.random(list.length($bubble-colors-list));
+  $random-color: list.nth($bubble-colors-list, $random-index);
+
+  p:nth-of-type(1) {
+    content: 'p:nth-of-type(1) {';
+  }
+  p:nth-of-type(1) {
+    $bubble-colors-list: (orange, brown, red, yellow, pink, silver, cyan, lavender, lightblue );
+    $random-index: math.random(list.length($bubble-colors-list));
+    $random-color: list.nth($bubble-colors-list, $random-index);
+    background-color: $random-color
+  }
+  p:nth-of-type(2) {
+    $bubble-colors-list: (orange, brown, red, yellow, pink, silver, cyan, lavender, lightblue );
+    $random-index: math.random(list.length($bubble-colors-list));
+    $random-color: list.nth($bubble-colors-list, $random-index);
+    background-color:$random-color
+  }
+  p:nth-of-type(3) {
+    $bubble-colors-list: (orange, brown, red, yellow, pink, silver, cyan, lavender, lightblue );
+    $random-index: math.random(list.length($bubble-colors-list));
+    $random-color: list.nth($bubble-colors-list, $random-index);
+    background-color:$random-color
+  }
+  p:nth-of-type(5) {
+    $bubble-colors-list: (orange, brown, red, yellow, pink, silver, cyan, lavender, lightblue );
+    $random-index: math.random(list.length($bubble-colors-list));
+    $random-color: list.nth($bubble-colors-list, $random-index);
+    background-color:$random-color
+  }
+
+  p:nth-of-type(6) {
+    $bubble-colors-list: (orange, brown, red, yellow, pink, silver, cyan, lavender, lightblue );
+    $random-index: math.random(list.length($bubble-colors-list));
+    $random-color: list.nth($bubble-colors-list, $random-index);
+    background-color:$random-color
+  }
+
+  p:nth-of-type(7) {
+    $bubble-colors-list: (orange, brown, red, yellow, pink, silver, cyan, lavender, lightblue );
+    $random-index: math.random(list.length($bubble-colors-list));
+    $random-color: list.nth($bubble-colors-list, $random-index);
+    background-color:$random-color
+  }
+
+  p:nth-of-type(8) {
+    $bubble-colors-list: (orange, brown, red, yellow, pink, silver, cyan, lavender, lightblue );
+    $random-index: math.random(list.length($bubble-colors-list));
+    $random-color: list.nth($bubble-colors-list, $random-index);
+    background-color:$random-color
+  }
+
+  p:nth-of-type(9) {
+    $bubble-colors-list: (orange, brown, red, yellow, pink, silver, cyan, lavender, lightblue );
+    $random-index: math.random(list.length($bubble-colors-list));
+    $random-color: list.nth($bubble-colors-list, $random-index);
+    background-color:$random-color
+  }
+
+  p:nth-of-type(10) {
+    $bubble-colors-list: (orange, brown, red, yellow, pink, silver, cyan, lavender, lightblue );
+    $random-index: math.random(list.length($bubble-colors-list));
+    $random-color: list.nth($bubble-colors-list, $random-index);
+    background-color:$random-color
+  }
+
+  p {    
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+
+    -webkit-box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2), inset 0px 10px 30px 5px rgba(255, 255, 255, 1);
+    -moz-box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2), inset 0px 10px 30px 5px rgba(255, 255, 255, 1);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2), inset 0px 10px 30px 5px rgba(255, 255, 255, 1);
+
+    height: 200px;
+    position: absolute;
+    width: 200px;
+  }
+
+  p:after {
+    background: -moz-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 70%);
+    /* FF3.6+ */
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(255, 255, 255, 0.5)), color-stop(70%, rgba(255, 255, 255, 0)));
+    /* Chrome,Safari4+ */
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 70%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 70%);
+    /* Opera 12+ */
+    background: -ms-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 70%);
+    /* IE10+ */
+    background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 70%);
+    /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80ffffff', endColorstr='#00ffffff', GradientType=1);
+    /* IE6-9 fallback on horizontal gradient */
+
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+
+    -webkit-box-shadow: inset 0 20px 30px rgba(255, 255, 255, 0.3);
+    -moz-box-shadow: inset 0 20px 30px rgba(255, 255, 255, 0.3);
+    box-shadow: inset 0 20px 30px rgba(255, 255, 255, 0.3);
+
+    content: "";
+    height: 180px;
+    left: 10px;
+    position: absolute;
+    width: 180px;
+  }
+}
+
+@-webkit-keyframes animateBubble {
+  0% {
+    margin-top: 1000px;
+  }
+
+  100% {
+    margin-top: -100%;
+  }
+}
+
+@-moz-keyframes animateBubble {
+  0% {
+    margin-top: 1000px;
+  }
+
+  100% {
+    margin-top: -100%;
+  }
+}
+
+@keyframes animateBubble {
+  0% {
+    margin-top: 1000px;
+  }
+
+  100% {
+    margin-top: -100%;
+  }
+}
+
+@-webkit-keyframes sideWays {
+  0% {
+    margin-left: 0px;
+  }
+
+  100% {
+    margin-left: 50px;
+  }
+}
+
+@-moz-keyframes sideWays {
+  0% {
+    margin-left: 0px;
+  }
+
+  100% {
+    margin-left: 50px;
+  }
+}
+
+@keyframes sideWays {
+  0% {
+    margin-left: 0px;
+  }
+
+  100% {
+    margin-left: 50px;
+  }
+}
+
+.pkbubblex1 {
+  -webkit-animation: animateBubble 25s linear infinite, sideWays 2s ease-in-out infinite alternate;
+  -moz-animation: animateBubble 25s linear infinite, sideWays 2s ease-in-out infinite alternate;
+  animation: animateBubble 25s linear infinite, sideWays 2s ease-in-out infinite alternate;
+
+  left: -5%;
+  top: 5%;
+
+  -webkit-transform: scale(0.6);
+  -moz-transform: scale(0.6);
+  transform: scale(0.6);
+}
+
+.pkbubblex2 {
+  -webkit-animation: animateBubble 20s linear infinite, sideWays 4s ease-in-out infinite alternate;
+  -moz-animation: animateBubble 20s linear infinite, sideWays 4s ease-in-out infinite alternate;
+  animation: animateBubble 20s linear infinite, sideWays 4s ease-in-out infinite alternate;
+
+  left: 5%;
+  top: 80%;
+
+  -webkit-transform: scale(0.4);
+  -moz-transform: scale(0.4);
+  transform: scale(0.4);
+}
+
+.pkbubblex3 {
+  -webkit-animation: animateBubble 28s linear infinite, sideWays 2s ease-in-out infinite alternate;
+  -moz-animation: animateBubble 28s linear infinite, sideWays 2s ease-in-out infinite alternate;
+  animation: animateBubble 28s linear infinite, sideWays 2s ease-in-out infinite alternate;
+
+  left: 10%;
+  top: 40%;
+
+  -webkit-transform: scale(0.7);
+  -moz-transform: scale(0.7);
+  transform: scale(0.7);
+}
+
+.pkbubblex4 {
+  -webkit-animation: animateBubble 22s linear infinite, sideWays 3s ease-in-out infinite alternate;
+  -moz-animation: animateBubble 22s linear infinite, sideWays 3s ease-in-out infinite alternate;
+  animation: animateBubble 22s linear infinite, sideWays 3s ease-in-out infinite alternate;
+
+  left: 20%;
+  top: 0;
+
+  -webkit-transform: scale(0.3);
+  -moz-transform: scale(0.3);
+  transform: scale(0.3);
+}
+
+.pkbubblex5 {
+  -webkit-animation: animateBubble 29s linear infinite, sideWays 4s ease-in-out infinite alternate;
+  -moz-animation: animateBubble 29s linear infinite, sideWays 4s ease-in-out infinite alternate;
+  animation: animateBubble 29s linear infinite, sideWays 4s ease-in-out infinite alternate;
+
+  left: 30%;
+  top: 50%;
+
+  -webkit-transform: scale(0.5);
+  -moz-transform: scale(0.5);
+  transform: scale(0.5);
+}
+
+.pkbubblex6 {
+  -webkit-animation: animateBubble 21s linear infinite, sideWays 2s ease-in-out infinite alternate;
+  -moz-animation: animateBubble 21s linear infinite, sideWays 2s ease-in-out infinite alternate;
+  animation: animateBubble 21s linear infinite, sideWays 2s ease-in-out infinite alternate;
+
+  left: 50%;
+  top: 0;
+
+  -webkit-transform: scale(0.8);
+  -moz-transform: scale(0.8);
+  transform: scale(0.8);
+}
+
+.pkbubblex7 {
+  -webkit-animation: animateBubble 20s linear infinite, sideWays 2s ease-in-out infinite alternate;
+  -moz-animation: animateBubble 20s linear infinite, sideWays 2s ease-in-out infinite alternate;
+  animation: animateBubble 20s linear infinite, sideWays 2s ease-in-out infinite alternate;
+
+  left: 65%;
+  top: 70%;
+
+  -webkit-transform: scale(0.4);
+  -moz-transform: scale(0.4);
+  transform: scale(0.4);
+}
+
+.pkbubblex8 {
+  -webkit-animation: animateBubble 22s linear infinite, sideWays 3s ease-in-out infinite alternate;
+  -moz-animation: animateBubble 22s linear infinite, sideWays 3s ease-in-out infinite alternate;
+  animation: animateBubble 22s linear infinite, sideWays 3s ease-in-out infinite alternate;
+
+  left: 80%;
+  top: 10%;
+
+  -webkit-transform: scale(0.3);
+  -moz-transform: scale(0.3);
+  transform: scale(0.3);
+}
+
+.pkbubblex9 {
+  -webkit-animation: animateBubble 29s linear infinite, sideWays 4s ease-in-out infinite alternate;
+  -moz-animation: animateBubble 29s linear infinite, sideWays 4s ease-in-out infinite alternate;
+  animation: animateBubble 29s linear infinite, sideWays 4s ease-in-out infinite alternate;
+
+  left: 90%;
+  top: 50%;
+
+  -webkit-transform: scale(0.6);
+  -moz-transform: scale(0.6);
+  transform: scale(0.6);
+}
+
+.pkbubblex10 {
+  -webkit-animation: animateBubble 26s linear infinite, sideWays 2s ease-in-out infinite alternate;
+  -moz-animation: animateBubble 26s linear infinite, sideWays 2s ease-in-out infinite alternate;
+  animation: animateBubble 26s linear infinite, sideWays 2s ease-in-out infinite alternate;
+
+  left: 80%;
+  top: 80%;
+
+  -webkit-transform: scale(0.3);
+  -moz-transform: scale(0.3);
+  transform: scale(0.3);
+}
+
+
+
+
+/**********************************************************************************************************************************************************************/
+/*                                                              AUDIO                                                                                                 */
+/*                                                                                                                                                                    */
+/**********************************************************************************************************************************************************************/
+.pkaudiocontainer {
+  position: absolute !important;
+  bottom: -4rem;
+  margin: 0 auto;
+}
+
+
+
+
+
+/**********************************************************************************************************************************************************************/
+/*                                                              ERROR                                                                                                 */
+/*                                                                                                                                                                    */
+/**********************************************************************************************************************************************************************/
+.pkhttperror {
+  color: $pkprimary-color;
+  background-color: inherit;
+}
+
+.pkerrorcontainer {
+  summary {
+    list-style: none;
+    background: -webkit-linear-gradient(-180deg, $pkbutton-background-color-1, $pkbutton-background-color-2, $pkbutton-background-color-3);
+    background: -o-linear-gradient(-180deg, $pkbutton-background-color-1, $pkbutton-background-color-2, $pkbutton-background-color-3);
+    background: -moz-linear-gradient(-180deg, $pkbutton-background-color-1, $pkbutton-background-color-2, $pkbutton-background-color-3);
+    background: linear-gradient(-180deg, $pkbutton-background-color-1, $pkbutton-background-color-2, $pkbutton-background-color-3);
+    color: yellow;
+    border-right: none;
+    border-left: none;
+    border-top: white 2px solid;
+    border-bottom: white 2px solid;
+    margin: 0 !important;
+  }
+
+  li,
+  li * {
+    color: yellow !important;
+  }
+  
+  li{display: flex;}
+}
+
+.pkerrorscrollercontainer {
+  overflow: hidden;
+}
+
+.pkerrorscroller {
+  text-align: right;
+
+  /* animation properties */
+  -moz-transform: translateX(-100%);
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);
+
+  -moz-animation: my-animation 15s linear infinite;
+  -webkit-animation: my-animation 15s linear infinite;
+  animation: my-animation 15s linear infinite;
+}
+
+/* for Firefox */
+@-moz-keyframes my-animation {
+  from {
+    -moz-transform: translateX(-100%);
+  }
+
+  to {
+    -moz-transform: translateX(100%);
+  }
+}
+
+/* for Chrome */
+@-webkit-keyframes my-animation {
+  from {
+    -webkit-transform: translateX(-100%);
+  }
+
+  to {
+    -webkit-transform: translateX(100%);
+  }
+}
+
+@keyframes my-animation {
+  from {
+    -moz-transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+
+  to {
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+}
+
+
+
+
+/**********************************************************************************************************************************************************************/
+/*                                                              MAIN MENU                                                                                             */
+/*                                                                                                                                                                    */
+/**********************************************************************************************************************************************************************/
+.k-avatar:hover {
+  border: orange 2px solid !important;
+}
+
+.pkmainmenu {
+  text-transform: none;
+  padding-right: 1rem !important;
+  padding-left: 2rem !important;
+}
+
+.pkmainmenucontainer {
+  text-transform: none;
+}
+
+.pkmainmenubrand {
+  margin-top: 0rem;
+  font-size: 1.5rem;
+  padding-bottom: 0;
+  border-bottom: transparent 2px solid;
+}
+
+.pkmainmenubrand:hover {
+  border-bottom: $pkprimary-color 2px solid;
+}
+
+.pkmainmenucountryselector {
+  min-width: 10rem;
+}
+
+@media only screen and (max-width: 540px) {
+  .pkmainmenucontainer {
+    button {
+      span{
+        font-size: 3.5rem;
+      }
+    }    
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .pkmainmenucontainer {
+    button {
+      span{
+        font-size: 3rem;
+      }
+    }    
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  .pkmainmenucontainer {
+    button {
+      span{
+        font-size: 2.5rem;
+      }
+    }    
+  }
+}
+
+@media only screen and (max-width: 1199px) {
+  .pkmainmenucontainer {
+    button {
+      span{
+        font-size: 2rem;
+      }
+    }    
+  }
+  .pkmainmenuuseravatersvg {
+    display: block;
+    margin: 1rem 0;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .pkmainmenucontainer {
+    button {
+      span{
+        font-size: 1.5rem;
+      }
+    }    
+  }
+  .pkmainmenucontainerbar {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .pkmainmenuuseravatersvg {
+    margin: 0 1rem;
+  }
+}
+
+.pkmainmenuuseravatersvgusingtext {
+  font-size: smaller;
+}
+
+.pkmainmenucontainerbarwaitcontainer {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.pkmainmenucontainerbarwait {
+  width: 1rem;
+  margin-bottom: 0rem;
+  margin-left: 0.5rem;
+  padding: 0rem;
+  height: 3px;
+}
+
+.pkmainmenuitem {
+  color: $pkprimary-color !important;
+  border-bottom: transparent 2px solid;
+}
+
+.pkmainmenuitem:hover {
+  border-bottom: $pkprimary-color 2px solid;
+}
+
+.pkmainsubmenuitem {
+  color: black !important;
+  border-bottom: transparent 2px solid;
+}
+
+.pkmainsubmenuitem:hover {
+  border-bottom: black 2px solid;
+}
+
+.pkmainmenudropdown,
+.pkmainmenudropdown>* {
+  color: $pkprimary-color !important;
+  border-bottom: transparent 2px solid;
+}
+
+.pkmainmenudropdown:hover {
+  border-bottom: $pkprimary-color 2px solid;
+}
+
+.pkmainsubmenudropdown,
+.pkmainsubmenudropdown>* {
+  color: black !important;
+  padding-left: 0.5rem;
+}
+
+.pkmainmenuitem,
+.pkmainmenuitem,
+.pkmainmenudropdown .pkmainsubmenudropdown {
+  white-space: nowrap !important;
+}
+
+.pkselectedmainmenuitem {
+  border-bottom: $pk-line-color 2px solid !important;
+}
+
+.pkmainmenuuseravater {
+  margin-bottom: 0.5rem;
+}
+
+@media only screen and (min-width: 540px) {
+  .pkmainmenuuseravater {
+    transition: none;
+  }
+}
+
+@media only screen and (min-width: 720px) {
+  .pkmainmenuuseravater {
+    transition: none;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  .pkmainmenuuseravater {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}
+
+@media only screen and (min-width: 1140px) {
+  .pkmainmenuuseravater {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}
+
+@media only screen and (min-width: 1320px) {
+  .pkmainmenuuseravater {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}
+
+.pkmainmenuuseravaterpopup {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.pkmainmenuuseravaterpopup {
+  margin: 0 auto;
+  text-align: center;
+  min-width: 200px;
+  max-width: 300px;
+
+  .k-popup {
+    margin-top: 0px;
+    padding: 0 2rem 0.25rem 2rem;
+  }
+
+  * {
+    margin: auto;
+    overflow-wrap: break-word;
+  }
+}
+
+.pkmainmenuuserpopupavateremail {
+  word-break: break-all;
+}
+
+.pkmainmenunotifications {
+  .k-badge-container {
+    vertical-align: text-top;
+  }
+
+  span {
+    span {
+      border: transparent solid 2px !important;
+      background-color: #3366ff !important;
+    }
+
+    span:hover {
+      text-decoration: underline !important;
+      border: #ff9933 solid 2px !important;
+      background-color: #0000ff !important;
+    }
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .pkmainmenunotifications {
+    margin: 0 0.5rem 0 1rem;
+  }
+
+}
+
+@media only screen and (max-width: 1199px) {
+  .pkmainmenunotifications {
+    margin: 1.5rem 0 0 0;
+    a > span > span{
+      left: -15px !important;
+    }
+  }
+}
+
+/**********************************************************************************************************************************************************************/
+/*                                                              BREADCRUMB                                                                                            */
+/*                                                                                                                                                                    */
+/**********************************************************************************************************************************************************************/
+.pkbreadcrumb {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  background-color: #ffffff;
+}
+
+.pkbreadcrumbinner {
+  padding-right: 0;
+  padding-left: 1.5rem;
+}
+
+.pkbreadcrumblinks {
+  span[role='link'] {
+    text-decoration: none !important;
+  }
+
+  span[role='link'] *:hover {
+    text-decoration: underline !important;
+  }
+}
+
+
+
+
+/**********************************************************************************************************************************************************************/
+/*                                                              INFO TIP                                                                                              */
+/*                                                                                                                                                                    */
+/**********************************************************************************************************************************************************************/
+.pkinfotipbutton {
+  display: inline;
+  padding: 0.25rem !important;
+  margin: 0 !important;
+  color: #555 !important
+}
+
+.pkinfotipbutton:focus,
+.pkinfotipbutton:hover {
+  color: #ff9933 !important
+}
+
+.pkinfotipopover {
+  max-width: 60%;
+}
+
+
+
+
+/**********************************************************************************************************************************************************************/
+/*                                                              TABLES                                                                                                */
+/*                                                                                                                                                                    */
+/**********************************************************************************************************************************************************************/
+.pktablewithfirstcolumnhighlighted {
+  min-width: -moz-fit-content;
+  min-width: -webkit-fill-available;
+  min-width: fit-content;
+  max-width: 900px;
+  border-spacing: 3px;
+
+  //border-collapse: collapse;  
+  // table-layout: fixed;
+  td {
+    padding: 0.5rem 1rem 0.25rem 1rem !important;
+    border: $pk-line-color 1px solid;
+  }
+
+  td:first {
+    width: auto;
+  }
+
+  td:nth-of-type(2) {
+    min-width: 10rem;
+  }
+
+  td:first-of-type {
+    color: $pkmain-content-color;
+    font-weight: bolder;
+  }
+
+  td+td {
+    transition: none;
+  }
+
+  thead th {
+    color: $pkmain-content-color;
+    border: $pk-line-color 1px solid;
+    padding: 0.5rem 1rem 0.25rem 1rem !important;
+  }
+
+  tfoot th {
+    color: $pkmain-content-color;
+    border: $pk-line-color 1px solid;
+    padding: 0.5rem 1rem 0.25rem 1rem !important;
+  }
+
+  tfoot th:first-of-type {
+    border: none !important
+  }
+}
+
+
+
+
+/**********************************************************************************************************************************************************************/
+/*                                                              COMPONENT                                                                                                 */
+/*                                                                                                                                                                    */
+/**********************************************************************************************************************************************************************/
+.pkformcomponent {
+  min-width: 600px;
+  max-width: 900px;
+  margin: 0 0;
+  padding: 0;
+}
+
+@media only screen and (max-width: 750) {
+  .pkformcomponent {
+    min-width: 90%;
+    max-width: 95%;
+  }
+}
+
+@media only screen and (max-width: 999px) {
+  .pkformcomponent {
+    min-width: 85%;
+    max-width: 90%;
+  }
+}
+
+
+
+
+/**********************************************************************************************************************************************************************/
+/*                                                              PHONE INPUT                                                                                           */
+/*                                                                                                                                                                    */
+/**********************************************************************************************************************************************************************/
+.pkforminputphonenumber {
+
+  .react-international-phone-input,
+  input {
+    font-size: 1rem !important;
+    height: 2rem !important;
+    line-height: 1.5rem;
+  }
+
+  button {
+    height: 2rem !important;
+  }
+}
+
+
+
+
+/**********************************************************************************************************************************************************************/
+/*                                                              FORM                                                                                                 */
+/*                                                                                                                                                                    */
+/**********************************************************************************************************************************************************************/
+.pkform {
+
+  input[type='text'],
+  input[type='email'],
+  input[type='date'],
+  input[type='datetime-local'],
+  input[type='month'],
+  input[type='time'],
+  input[type='Week'],
+  input[type='number'],
+  input[type='password'],
+  input[type='file'],
+  input[type='range'],
+  input[type='search'],
+  input[type='file'],
+  input[type='tel'],
+  input[type='url'],
+  select,
+  .k-dropdownlist.k-picker,
+  textarea {
+    color: inherit;
+  }
+
+  max-width: 550px;
+}
+
+@media only screen and (max-width: 750) {
+  .pkform {
+    min-width: 90%;
+    max-width: 95%;
+  }
+}
+
+@media only screen and (max-width: 999px) {
+  .pkform {
+    min-width: 85%;
+    max-width: 90%;
+  }
+}
+
+.pkformfieldwrap {
+  white-space: nowrap !important;
+  display: inline-flex !important;
+}
+
+.pkformfieldwrap>input,
+.pkformfieldwrap>select,
+.pkformfieldwrap>textarea,
+.k-picker {
+  width: 80% !important;
+}
+
+.pkforminputcheckboxwithlink {
+  display: flex !important;
+  align-items: center !important;
+
+  .k-form-error * {
+    text-decoration: none !important;
+    color: red;
+  }
+
+  input {
+    margin-top: -3px;
+  }
+}
+
+.pkforminputcheckboxwithlinkicon {
+  padding: 0;
+}
+
+.pkforminputcheckboxwithlinkicon:hover {
+  color: #ff9933
+}
+
+.pkformlegend {
+  padding-bottom: 0 !important;
+  margin-bottom: 0 !important;
+  color: $pkh1-color;
+}
+
+.pkformfielderroranchor {
+  * {
+    max-width: 80%;
+    text-align: justify;
+  }
+}
+
+.pkhttperrormark {
+  background: transparent;
+  color: $pkerror-color;
+}
+
+
+
+
+/**********************************************************************************************************************************************************************/
+/*                                                              GRID                                                                                                  */
+/*                                                                                                                                                                    */
+/**********************************************************************************************************************************************************************/
+.pkgrid{    
+  a{
+  color: blue !important;
+  }
+
+  a:hover{
+    color: #f93 !important;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .pkgrid {
+    margin: 0 0.5rem 0 1rem;
+  }
+
+}
+
+@media only screen and (max-width: 1199px) {  
+  .pkgrid{
+    margin-right: 1rem;
+    font-size: 80%;
+    table{
+      font-size: 12px !important;
+      *{
+        font-size: 12px !important;
+      }
+      
+      thead{
+        button{
+          padding: 0 !important;
+        }
+
+        th > div > div{
+          display: flex !important;
+          flex-direction: column !important;
+        }
+      }
+    }    
+  }
+}
+
+@media only screen and (max-width: 900px) {  
+  .pkgrid{
+    margin-right: 1rem;
+    font-size: 80%;
+    table{
+      font-size: 11px !important;
+      *{
+        font-size: 11px !important;
+      }  
+    }    
+  }
+}
+
+
+@media only screen and (max-width: 700px) {  
+  .pkgrid{
+    margin-right: 1rem;
+    font-size: 80%;
+    table{
+      font-size: 10px !important;
+      *{
+        font-size: 10px !important;
+      }  
+    }    
+  }
+}
+
+
+
+
+/**********************************************************************************************************************************************************************/
+/*                                                              PAGE                                                                                                  */
+/*                                                                                                                                                                    */
+/**********************************************************************************************************************************************************************/
+.pkpagemaincontent {
+  display: flex;
+  flex-wrap: wrap;
+  flex-flow: row wrap;
+  gap: 3rem;
+}
+
+.pkpagemaincontentfirstcontainer {
+
+  align-self: flex-start
+}
+
+.pkpagemaincontentsecondcontainer {
+  transition: none
+}
+
+@media only screen and (max-width: 999px) {
+  .pkpagemaincontent {
+    width: 100%;
+  }
+
+  .pkpagemaincontentfirstcontainer {
+    width: 100%;
+  }
+
+  .pkpagemaincontentsecondcontainer {
+    width: 100%;
+  }
+}
+
+
+
+
+/**********************************************************************************************************************************************************************/
+/*                                                              COLLAPSER                                                                                             */
+/*                                                                                                                                                                    */
+/**********************************************************************************************************************************************************************/
+.pkcollapser {
+  summary.pkcollapsersummary {
+    position: absolute;
+    color: #ff9933;
+    margin-top: -4px;
+  }
+
+  summary.pkcollapsersummary:hover {
+    color: yellow;
+  }
+}
+
+
+
+
+/**********************************************************************************************************************************************************************/
+/*                                                              PAGE LINKS                                                                                            */
+/*                                                                                                                                                                    */
+/**********************************************************************************************************************************************************************/
+.pkpagelinkcontainer {
+  transition: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 1rem;
+  align-items: center;
+
+  a:hover {
+    color: #9cF !important;
+  }
+
+  h5 {
+    width: 27rem;
+    padding: 2rem 1rem;
+    border-width: 1px;
+    border-style: solid;
+    border-color: $pk-line-color;
+    background: linear-gradient(-180deg, #222, #111, #222);
+
+    a {
+      .pkbadgecontainer {
+        position: absolute;
+        margin-left: 1rem !important;
+
+        * {
+          background-color: #3366ff !important;
+          border: transparent solid 2px;
+        }
+
+        *:hover {
+          background-color: #0000ff !important;
+          text-decoration: underline;
+          border: #ff9933 solid 2px;
+        }
+      }
+    }
+  }
+
+  h5:hover {
+    background-color: $pkbutton-background-color-2;
+    background: -webkit-linear-gradient(-180deg, #111111, #1F1F1F, #111111);
+    background: -o-linear-gradient(-180deg, #111111, #1F1F1F, #111111);
+    background: -moz-linear-gradient(-180deg, #111111, #1F1F1F, #111111);
+    background: linear-gradient(-180deg, #111111, #1F1F1F, #111111);
+  }
+
+  img {
+    margin: 0 0.5rem;
+  }
+}
+
+
+
+
+/**********************************************************************************************************************************************************************/
+/*                                                              HOME PAGE                                                                                             */
+/*                                                                                                                                                                    */
+/**********************************************************************************************************************************************************************/
+.pkhomepagemaincontent {
+  padding: 2rem;
+}
+ 
+.pkstepperinfo{
+  margin: 3rem 3rem;
+  background-color: white;
+  color: #222;
+  padding: 2rem;
+}
+
+// .pkstepper {
+//   //   ol > li > a > span > span,
+//   //   ol > li > a > span > span > svg {
+//   //    width: 96px !important;
+//   //    height: 96px !important;      
+//   //  }  
+//   .pkbigstepperstepicon{
+
+//   }
+//   .pkbigsteppersteplabel{
+    
+//   }
+// }
+
+
+/**********************************************************************************************************************************************************************/
+/*                                                              LOGIN PAGE                                                                                            */
+/*                                                                                                                                                                    */
+/**********************************************************************************************************************************************************************/
+.pkloginform {
+  transition: none;
+}
+
+.pkloginformcomponent {
+  transition: none;
+}
+
+.pkExternalLoginProvidersComponent{
+  
+}
+
+.pkloginpagemaincontent {
+  transition: none;
+}
+
+.pkloginpagemaincontentfirstcontainer {
+  transition: none;
+}
+
+.pkloginpagemaincontentsecondcontainer {
+  aside {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem 2rem;
+    align-items: center;
+    border: $pk-line-color solid 1px;
+    max-width: 700px;
+
+    a:hover {
+      color: $pknav-a-color-hover;
+    }
+  }
+
+  p:hover {
+    background-color: $pkbutton-background-color-2;
+    background: -webkit-linear-gradient(-180deg, $pkbutton-background-color-1, $pkbutton-background-color-2, $pkbutton-background-color-3);
+    /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(-180deg, $pkbutton-background-color-1, $pkbutton-background-color-2, $pkbutton-background-color-3);
+    /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(-180deg, $pkbutton-background-color-1, $pkbutton-background-color-2, $pkbutton-background-color-3);
+    /* For Firefox 3.6 to 15 */
+    background: linear-gradient(-180deg, $pkbutton-background-color-1, $pkbutton-background-color-2, $pkbutton-background-color-3);
+    /* Standard syntax */
+  }
+}
+
+
+
+
+/**********************************************************************************************************************************************************************/
+/*                                                              FORGOT PASSWORD PAGE                                                                                  */
+/*                                                                                                                                                                    */
+/**********************************************************************************************************************************************************************/
+.pkforgotpasswordpagemaincontent {
+  mark{
+    background-color: inherit;
+    color: white;
+  }
+}
+
+
+
+
+/**********************************************************************************************************************************************************************/
+/*                                                              REGISTER PAGE                                                                                         */
+/*                                                                                                                                                                    */
+/**********************************************************************************************************************************************************************/
+.pkregisterpagemaincontent {
+  transition: none;
+}
+
+.pkregisterformcomponent {
+  margin: 0 auto;
+  padding: 0;
+}
+
+.registerpagfirstarticle {
+  max-width: 600px;
+  align-self: flex-start
+}
+
+.pkregisterform {
+  transition: none;
+}
+
+.pkregisterpageimage {
+  width: 40% !important;
+  height: auto;
+  aspect-ratio: 1 !important;
+  max-width: 1000px;
+  max-height: 550px;
+}
+
+@media only screen and (max-width: 1400px) {
+  .pkregisterpageimage {
+    display: none;
+  }
+}
+
+
+
+
+/**********************************************************************************************************************************************************************/
+/*                                                              EXTERNAL LOGIN PAGE                                                                                   */
+/*                                                                                                                                                                    */
+/**********************************************************************************************************************************************************************/
+.pkexternalloginpagemaincontent {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+
+  aside {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    flex-wrap: nowrap;
+    gap: 1rem;
+    padding: 2rem 1rem;
+    align-items: center;
+    justify-content: center;
+    border: $pk-line-color solid 1px;
+    max-width: 700px;
+    min-width: 400px;
+    width: 500px;
+
+    a:hover {
+      color: $pknav-a-color-hover;
+    }
+  }
+
+  p:hover {
+    background-color: $pkbutton-background-color-2;
+    background: -webkit-linear-gradient(-180deg, $pkbutton-background-color-1, $pkbutton-background-color-2, $pkbutton-background-color-3);
+    /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(-180deg, $pkbutton-background-color-1, $pkbutton-background-color-2, $pkbutton-background-color-3);
+    /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(-180deg, $pkbutton-background-color-1, $pkbutton-background-color-2, $pkbutton-background-color-3);
+    /* For Firefox 3.6 to 15 */
+    background: linear-gradient(-180deg, $pkbutton-background-color-1, $pkbutton-background-color-2, $pkbutton-background-color-3);
+    /* Standard syntax */
+  }
+}
+
+
+
+
+/**********************************************************************************************************************************************************************/
+/*                                                              DISPLAY SETTINGS PAGE                                                                                 */
+/*                                                                                                                                                                    */
+/**********************************************************************************************************************************************************************/
+.pkuserdisplaysettingscomponent {
+  transition: none;
+}
+
+.pkuserdisplaysettingscomponentactionbar {
+  display: flex;
+}
+
+.pkuserdisplaysettingspagetablewithfirstcolumnhighlighted {
+  td {
+    padding: 0.5rem 1rem 0.25rem 1rem !important;
+    border: none !important;
+  }
+}
+
+
+
+
+/**********************************************************************************************************************************************************************/
+/*                                                              USER NAME PAGE                                                                                        */
+/*                                                                                                                                                                    */
+/**********************************************************************************************************************************************************************/
+.pkusernamepagetablewithfirstcolumnhighlighted {
+  transition: none;
+
+  td {
+    transition: none;
+  }
+}
+
+
+
+
+/**********************************************************************************************************************************************************************/
+/*                                                              USER EMAIL ADDRESSES PAGE                                                                             */
+/*                                                                                                                                                                    */
+/**********************************************************************************************************************************************************************/
+.pkemailaddresspagetablewithfirstcolumnhighlighted {
+  transition: none;
+
+  td {
+    transition: none;
+  }
+}
+
+
+
+
+/**********************************************************************************************************************************************************************/
+/*                                                              USER PHONE NUMBER PAGE                                                                                */
+/*                                                                                                                                                                    */
+/**********************************************************************************************************************************************************************/
+.pkphonepagetablewithfirstcolumnhighlighted {
+  transition: none;
+
+  td {
+    transition: none;
+  }
+}
+
+
+
+
+/**********************************************************************************************************************************************************************/
+/*                                                              COMMUNICATION PREFERENCES PAGE                                                                        */
+/*                                                                                                                                                                    */
+/**********************************************************************************************************************************************************************/
+.pkusercommunicationpreferencescomponent {
+  transition: none;
+}
+
+.pkusercommunicationpreferencescomponentactionbar {
+  display: flex;
+}
+
+.pkusercommunicationpreferencespagetablewithfirstcolumnhighlighted {
+  td {
+    padding: 0.5rem 1rem 0.25rem 1rem !important;
+    border: none !important;
+  }
+}
+
+
+
+
+/**********************************************************************************************************************************************************************/
+/*                                                              PRIVACY POLICY PAGE                                                                                                 */
+/*                                                                                                                                                                    */
+/**********************************************************************************************************************************************************************/
+.pkprivacypolicypage {
+  a{
+    color: #1369eb !important
+  }
+  a:hover{
+    color: blue !important
+  }
+  details {
+    background-color: #fff;
+    padding: 1rem 2rem 1rem 2rem;
+    border-bottom: solid 1px #aaa;
+
+    summary {
+      background-color: #fff;
+      text-transform: uppercase;
+      color: $pknav-a-color;
+      font-weight: bold;
+    }
+
+    summary:hover {
+      text-decoration: underline;
+    }
+
+    p {
+      color: #000;
+    }
+  }
+}
+
+
+
+
+/**********************************************************************************************************************************************************************/
+/*                                                              USER LOGINS PAGE                                                                                      */
+/*                                                                                                                                                                    */
+/**********************************************************************************************************************************************************************/
+.pkgridlogins {
+  table{
+    tr{
+      td:nth-of-type(1) {
+        max-width: 20%;
+      }
+      td:nth-of-type(2) {
+        max-width: 20%;
+      }
+      td:nth-of-type(3) {
+        max-width: 20%;
+      }
+      td:nth-of-type(4) {
+        max-width: 20%;
+      }
+    }
+  }
+}
+
+
+
+
+/**********************************************************************************************************************************************************************/
+/*                                                              CHANGE PASSWORD PAGE                                                                                  */
+/*                                                                                                                                                                    */
+/**********************************************************************************************************************************************************************/
+.pkchangepasswordpagemaincontent {
+  mark{
+    background-color: inherit;
+    color: white;
+  }
+}
+
+
+
+
+/**********************************************************************************************************************************************************************/
+/*                                                              USER NOTIFICATIONS PAGE                                                                               */
+/*                                                                                                                                                                    */
+/**********************************************************************************************************************************************************************/
+.pkgridnotifications {
+  table{
+    tr{
+      td:nth-of-type(1) {
+        max-width: 20%;
+      }
+      td:nth-of-type(2) {
+        max-width: 10%;
+      }
+      td:nth-of-type(3) {
+        max-width: 10%;
+      }
+      td:nth-of-type(4) {
+        max-width: 55%;
+      }
+      td:nth-of-type(5) {
+        max-width: 5%;
+      }
+    }
+  }
+}
+
+.pkgridnotificationsaction{
+  >span {    
+    border: transparent solid 2px !important;
+    color: #3366ff !important;
+  }
+
+  >span:hover {
+    text-decoration: underline !important;
+    border: #ff9933 solid 2px !important;
+    color: #0000ff !important;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .pkgridnotifications {
+    transition: none;
+  }
+
+}
+
+@media only screen and (max-width: 1199px) {  
+  /*Grid with is 700px */
+  .pkgridnotifications{
+    thead{      
+      th:nth-of-type(1){
+        width: 100px !important;
+      }
+      th:nth-of-type(2){
+        width: 80px !important;
+      }
+      th:nth-of-type(3){
+        width: 300px !important;
+      }
+      th:nth-of-type(4){
+        width: 100px !important;
+      }
+      th:nth-of-type(5){
+        width: 50px !important;
+      }
+    }
+    tbody{      
+      td:nth-of-type(1){
+        width: 100px !important;
+      }
+      td:nth-of-type(2){
+        width: 80px !important;
+      }
+      td:nth-of-type(3){
+        width: 300px !important;
+      }
+      td:nth-of-type(4){
+        width: 100px !important;
+      }
+      td:nth-of-type(5){
+        width: 50px !important;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 800px) {  
+  /*Grid with is 600px */
+  .pkgridnotifications{
+    thead{      
+      th:nth-of-type(1){
+        width: 85px !important;
+      }
+      th:nth-of-type(2){
+        width: 70px !important;
+      }
+      th:nth-of-type(3){
+        width: 257px !important;
+      }
+      th:nth-of-type(4){
+        width: 85px !important;
+      }
+      th:nth-of-type(5){
+        width: 42px !important;
+      }
+    }
+    tbody{      
+      td:nth-of-type(1){
+        width: 85px !important;
+      }
+      td:nth-of-type(2){
+        width: 70px !important;
+      }
+      td:nth-of-type(3){
+        width: 257px !important;
+      }
+      td:nth-of-type(4){
+        width: 85px !important;
+      }
+      td:nth-of-type(5){
+        width: 42px !important;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {  
+  /*Grid with is 450px */
+  .pkgridnotifications{
+    thead{      
+      th:nth-of-type(1){
+        width: 63px !important;
+      }
+      th:nth-of-type(2){
+        width: 40px !important;
+      }
+      th:nth-of-type(3){
+        width: 180px !important;
+      }
+      th:nth-of-type(4){
+        width: 47px !important;
+      }
+      th:nth-of-type(5){
+        width: 31px !important;
+      }
+    }
+    tbody{      
+      td:nth-of-type(1){
+        width: 63px !important;
+      }
+      td:nth-of-type(2){
+        width: 40px !important;
+      }
+      td:nth-of-type(3){
+        width: 180px !important;
+      }
+      td:nth-of-type(4){
+        width: 47px !important;
+      }
+      td:nth-of-type(5){
+        width: 31px !important;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {  
+  /*Grid with is 400px */
+  .pkgridnotifications{
+    thead{      
+      th:nth-of-type(1){
+        width: 55px !important;
+      }
+      th:nth-of-type(2){
+        width: 40px !important;
+      }
+      th:nth-of-type(3){
+        width: 100px !important;
+      }
+      th:nth-of-type(4){
+        width: 40px !important;
+      }
+      th:nth-of-type(5){
+        width: 31px !important;
+      }
+    }
+    tbody{      
+      td:nth-of-type(1){
+        width: 55px !important;
+      }
+      td:nth-of-type(2){
+        width: 40px !important;
+      }
+      td:nth-of-type(3){
+        width: 100px !important;
+      }
+      td:nth-of-type(4){
+        width: 40px !important;
+      }
+      td:nth-of-type(5){
+        width: 31px !important;
+      }
+    }
+  }
+}
+
+
+/**********************************************************************************************************************************************************************/
+/*                                                              THEME                                                                                                 */
+/*                                                                                                                                                                    */
+/**********************************************************************************************************************************************************************/
+.pktheme {
+  padding: 2rem;
+}
+
+
+
+
+/**********************************************************************************************************************************************************************/
+/*                                                              DARK THEME                                                                                            */
+/*                                                                                                                                                                    */
+/**********************************************************************************************************************************************************************/
+.pkdark {
+  color: $pksecondary-color;
+  background-color: rgba(0, 0, 0, .25) !important;
+
+  main {
+    color: $pksecondary-color;
+    background-color: rgba(0, 0, 0, .25) !important;
+    ;
+  }
+}
+
+
+
+
+/**********************************************************************************************************************************************************************/
+/*                                                              NEUTRAL THEME                                                                                         */
+/*                                                                                                                                                                    */
+/**********************************************************************************************************************************************************************/
+.pkneutral {
+  background-color: #fff;
+  color: #222;
+  border-top: 4px solid;
+}
+
+.pkneutral {
+  .pkbutton {
+    color: #c0c0ff !important;
+    border-color: #06f;
+    background: -webkit-linear-gradient(-180deg, #3300ff, #1100ff, #3300ff);
+    background: -o-linear-gradient(-180deg, #3300ff, #1100ff, #3300ff);
+    background: -moz-linear-gradient(-180deg, #3300ff, #1100ff, #3300ff);
+    background: linear-gradient(-180deg, #3300ff, #1100ff, #3300ff);
+  }
+
+  .pkbutton:hover {
+    color: #fff !important;
+    border-color: $pkneutral-pkbutton-border-color-hover;
+    background: -webkit-linear-gradient(-180deg, #3300ff, #0000bb, #3300ff);
+    background: -o-linear-gradient(-180deg, #3300ff, #0000bb, #3300ff);
+    background: -moz-linear-gradient(-180deg, #3300ff, #0000bb, #3300ff);
+    background: linear-gradient(-180deg, #3300ff, #0000bb, #3300ff);
+  }
+
+  h1,
+  .pkh1 {
+    color: $pkneutral-pkh1-color;
+  }
+
+  .pkformlegend {
+    color: $pkneutral-pkh1-color;
+  }
+
+  
+  .pktablewithfirstcolumnhighlighted {    
+    color: #000 !important;
+    *{color: #000 !important;} 
+    thead th{
+      color: #000 !important;
+    }
+    tbody td:first-of-type{
+      color: #000 !important;
+    }
+    tbody td{
+      color: #000 !important;
+    }
+  }
+
+  .pkusernamepagetablewithfirstcolumnhighlighted {
+    td {
+      color: $pkneutral-pkmain-content-color;
+    }
+  }
+
+  .pkformfieldwrap {
+    label[for] {
+      color: $pkneutral-pkh1-color !important;
+    }
+
+    input,
+    textarea {
+      border: solid 1px $pkneutral-pkh1-color !important;
+    }
+
+    .pkbuttontypesubmit {
+      transition: none;
+    }
+  }
+
+  label {
+    color: $pkneutral-pkh1-color;
+  }
+
+  .pkformlabelhint {
+    color: $pkneutral-pkhint-color;
+  }
+
+  .pkpagelinkcontainer {
+    transition: none;
+
+    h5 {
+      border-color: #06f;
+      background: unset;
+      background-color: #fff !important;
+
+      a {
+        color: #3366ff !important;
+      }
+
+      a:hover {
+        color: #00f !important;
+      }
+    }
+
+    h5:hover {
+      background: unset;
+      background-color: #fff !important;
+    }
+  }
+
+  .pkhttperror {
+    color: $pkprimary-color;
+    background-color: inherit;
+  }
+
+  .pkerrorcontainer {
+    summary {
+      list-style: none;
+      background-color: #222;
+      color: yellow;
+      border-right: none;
+      border-left: none;
+      border-top: #800 4px solid;
+      border-bottom: #800 4px solid;
+      margin: 0 !important;
+    }
+
+    li,
+    li * {
+      color: red !important;
+    }
+  }
+
+  .pkforgotpasswordpagemaincontent {
+    mark{
+      background-color: inherit;
+      color: black;
+    }
+  }
+
+  .pkchangepasswordpagemaincontent {
+    mark{
+      background-color: inherit;
+      color: black;
+    }
+  }
+}
+
+
+
+
+/**********************************************************************************************************************************************************************/
+/*                                                              BLUE THEME                                                                                            */
+/*                                                                                                                                                                    */
+/**********************************************************************************************************************************************************************/
+.pkblue {
+  color: #fff !important;
+  background-image: repeating-linear-gradient(-45deg, rgba(0, 0, 255, 0.25), rgba(0, 0, 255, 0.25) 1px, transparent 2px, transparent 4px);
+  background-size: 2px 2px;
+  border-top: 4px solid #444;
+}
+
+.pkblue {
+  .pkbutton {
+    color: #c0c0ff !important;
+
+    border-color: #06f;
+    background: -webkit-linear-gradient(-180deg, #3300ff, #1100ff, #3300ff);
+    background: -o-linear-gradient(-180deg, #3300ff, #1100ff, #3300ff);
+    background: -moz-linear-gradient(-180deg, #3300ff, #1100ff, #3300ff);
+    background: linear-gradient(-180deg, #3300ff, #1100ff, #3300ff);
+  }
+
+  .pkbutton:hover {
+    color: #fff !important;
+    border-color: #005;
+    background: -webkit-linear-gradient(-180deg, #3300ff, #0000bb, #3300ff);
+    background: -o-linear-gradient(-180deg, #3300ff, #0000bb, #3300ff);
+    background: -moz-linear-gradient(-180deg, #3300ff, #0000bb, #3300ff);
+    background: linear-gradient(-180deg, #3300ff, #0000bb, #3300ff);
+  }
+
+  a {
+    color: #e0e0ff;
+  }
+
+  h1,
+  .pkh1 {
+    color: #fff
+  }
+
+  .pkformlegend {
+    color: #fff;
+  }
+
+  .pktablewithfirstcolumnhighlighted {
+    td:first-of-type {
+      color: #fff;
+    }
+  }
+
+  .pkusernamepagetablewithfirstcolumnhighlighted {
+    color: #fff !important;
+
+    td {
+      color: #fff !important;
+    }
+  }
+
+  div[role='alert'] {
+    color: yellow;
+  }
+
+  .pkformfieldwrap {
+    label[for] {
+      color: #aaa;
+    }
+
+    input,
+    textarea {
+      border: solid 1px #fff !important;
+    }
+
+    .pkbuttontypesubmit {
+      transition: none;
+    }
+  }
+
+  label {
+    color: #fff;
+  }
+
+  .pkformlabelhint {
+    color: #aaa !important;
+  }
+
+  .pkpagelinkcontainer {
+    transition: none;
+
+    h5 {
+      border-color: #06f;
+      background: -webkit-linear-gradient(-180deg, #3300ff, #1100ff, #3300ff);
+      background: -o-linear-gradient(-180deg, #3300ff, #1100ff, #3300ff);
+      background: -moz-linear-gradient(-180deg, #3300ff, #1100ff, #3300ff);
+      background: linear-gradient(-180deg, #3300ff, #1100ff, #3300ff);
+
+      a {
+        color: #c0c0ff !important;
+      }
+
+      a:hover {
+        color: #fff !important;
+      }
+    }
+
+    h5:hover {
+      background: -webkit-linear-gradient(-180deg, #3300ff, #0000bb, #3300ff);
+      background: -o-linear-gradient(-180deg, #3300ff, #0000bb, #3300ff);
+      background: -moz-linear-gradient(-180deg, #3300ff, #0000bb, #3300ff);
+      background: linear-gradient(-180deg, #3300ff, #0000bb, #3300ff);
+    }
+  }
+
+}
+
+
+
+
+/************************************************************************************** ********************************************************************************/
+/*                                                              RED THEME                                                                                            */
+/*                                                                                                                                                                    */
+/**********************************************************************************************************************************************************************/
+.pkred {
+  //background-color: #009;
+  background-image: repeating-linear-gradient(-45deg, rgba(255, 0, 0, 0.25), rgba(255, 0, 0, 0.25) 1px, transparent 2px, transparent 4px);
+  background-size: 2px 2px;
+  border-top: 4px solid #444;
+}
+
+.pkred {
+  .pkbutton {
+    color: #fff !important;
+    border-color: #800;
+    background: -webkit-linear-gradient(-180deg, #b03, #f01, #b03);
+    background: -o-linear-gradient(-180deg, #b03, #f01, #b03);
+    background: -moz-linear-gradient(-180deg, #b03, #f01, #b03);
+    background: linear-gradient(-180deg, #b03, #f01, #b03);
+  }
+
+  .pkbutton:hover {
+    color: #fff !important;
+    border-color: #a00;
+    background: -webkit-linear-gradient(-180deg, #ff0033, #bb0000, #ff0033);
+    background: -o-linear-gradient(-180deg, #ff0033, #bb0000, #ff0033);
+    background: -moz-linear-gradient(-180deg, #ff0033, #bb0000, #ff0033);
+    background: linear-gradient(-180deg, #ff0033, #bb0000, #ff0033);
+  }
+
+  a {
+    color: #fff;
+  }
+
+  h1,
+  .pkh1 {
+    color: #fff
+  }
+
+  .pkformlegend {
+    color: #fff;
+  }
+
+  .pktablewithfirstcolumnhighlighted {
+    td:first-of-type {
+      color: #fff;
+    }
+  }
+
+  .pkusernamepagetablewithfirstcolumnhighlighted {
+    td {
+      color: #fff;
+    }
+  }
+
+  div[role='alert'] {
+    color: yellow;
+  }
+
+  .pkformfieldwrap {
+    label[for] {
+      color: #888;
+    }
+
+    input,
+    textarea {
+      border: solid 1px #fff !important;
+    }
+
+    .pkbuttontypesubmit {
+      transition: none;
+    }
+  }
+
+  label {
+    color: #fff;
+  }
+
+  .pkformlabelhint {
+    color: #888 !important;
+  }
+
+  .pkpagelinkcontainer {
+    transition: none;
+
+    h5 {
+      border-color: #800;
+      background: -webkit-linear-gradient(-180deg, #b03, #f01, #b03);
+      background: -o-linear-gradient(-180deg, #b03, #f01, #b03);
+      background: -moz-linear-gradient(-180deg, #b03, #f01, #b03);
+      background: linear-gradient(-180deg, #b03, #f01, #b03);
+
+      a {
+        color: #fff !important;
+      }
+
+      a:hover {
+        color: #fff !important;
+      }
+    }
+
+    h5:hover {
+      background: -webkit-linear-gradient(-180deg, #ff0033, #bb0000, #ff0033);
+      background: -o-linear-gradient(-180deg, #ff0033, #bb0000, #ff0033);
+      background: -moz-linear-gradient(-180deg, #ff0033, #bb0000, #ff0033);
+      background: linear-gradient(-180deg, #ff0033, #bb0000, #ff0033);
+    }
+  }
+
+  .pkbuttontypebutton {
+    color: unset;
+    border-color: unset;
+    background-color:unset;
+  }
+  
+  .pkbuttontypebutton:hover {
+    color: unset;
+    border-color: unset;
+    background-color:unset;    
+  }
+  
+}
+
+
+
+
+/**********************************************************************************************************************************************************************/
+/*                                                              LIGHT THEME                                                                                           */
+/*                                                                                                                                                                    */
+/**********************************************************************************************************************************************************************/
+.pklight {
+  background-color: $pklight-pkmain-content-background-color;
+}
+
+.pklight {
+  .pkbutton {
+    border-color: $pklight-pkbutton-border-color;
+    color: $pklight-pkprimary-color;
+  }
+
+  .pkbutton:hover {
+    color: $pklight-pkbutton-color-hover;
+    border-color: $pklight-pkbutton-border-color;
+    background-color: $pkbutton-background-color-2;
+    background: -webkit-linear-gradient(-180deg, $pklight-pkbutton-background-color-1, $pklight-pkbutton-background-color-2, $pklight-pkbutton-background-color-3);
+    /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(-180deg, $pklight-pkbutton-background-color-1, $pklight-pkbutton-background-color-2, $pklight-pkbutton-background-color-3);
+    /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(-180deg, $pklight-pkbutton-background-color-1, $pklight-pkbutton-background-color-2, $pklight-pkbutton-background-color-3);
+    /* For Firefox 3.6 to 15 */
+    background: linear-gradient(-180deg, $pklight-pkbutton-background-color-1, $pklight-pkbutton-background-color-2, $pklight-pkbutton-background-color-3);
+    /* Standard syntax */
+  }
+
+
+  h1,
+  .pkh1 {
+    color: $pklight-pkh1-color;
+    font-size: 1.8rem;
+  }
+
+  a {
+    color: $pklight-pknav-a-color;
+  }
+
+  a:hover {
+    color: $pklight-pknav-a-color-hover;
+  }
+
+  .pkgrid{    
+    a{
+    color: blue !important;
+    }
+  
+    a:hover{
+      color: #f93 !important;
+    }
+  }
+  
+  .pkformlegend {
+    color: $pklight-pkh1-color;
+  }
+
+  .pktablewithfirstcolumnhighlighted {
+    td:first-of-type {
+      color: $pklight-pkmain-content-color;
+    }
+  }
+
+  .pkusernamepagetablewithfirstcolumnhighlighted {
+    td {
+      color: $pklight-pkmain-content-color;
+    }
+  }
+
+  .pkformfieldwrap {
+    label[for] {
+      color: $pklight-pkh1-color !important;
+    }
+
+    *>input,
+    *>textarea {
+      border: solid 1px $pklight-pkh1-color !important;
+    }
+  }
+
+  .pkpagelinkcontainer {
+    transition: none;
+
+    h5 {
+      border-color: $pklight-line-color;
+      background: unset;
+
+      a:hover {
+        color: $pklight-pknav-a-color-hover;
+      }
+    }
+
+    h5:hover {
+      background-color: $pklight-pkbutton-background-color-2;
+      background: -webkit-linear-gradient(-180deg, $pklight-pkbutton-background-color-1, $pklight-pkbutton-background-color-2, $pklight-pkbutton-background-color-3);
+      background: -o-linear-gradient(-180deg, $pklight-pkbutton-background-color-1, $pklight-pkbutton-background-color-2, $pklight-pkbutton-background-color-3);
+      background: -moz-linear-gradient(-180deg, $pklight-pkbutton-background-color-1, $pklight-pkbutton-background-color-2, $pklight-pkbutton-background-color-3);
+      background: linear-gradient(-180deg, $pklight-pkbutton-background-color-1, $pklight-pkbutton-background-color-2, $pklight-pkbutton-background-color-3);
+    }
+  }
+
+  p.pkclearinfo a{
+    color: blue !important;
+  }
+
+  p.pkclearinfo a:hover{
+    color: royalblue !important;
+  }
+}
+
+.pkforminputcheckboxwithlinkicon:hover {
+  color: $pklight-pknav-a-color !important;
+}
+
+.pklightpkfullscreenbackgroundlightfilter {
+  background-color: $pklight-background-color-for-filter;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: -99;
+}

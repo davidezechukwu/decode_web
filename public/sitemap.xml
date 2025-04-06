@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://decodelocal.com</loc>
+  </url>
+
+  <url>
+    <loc>https://decodelocal.com/security/login</loc>
+  </url>
+
+  <url>
+    <loc>https://decodelocal.com/security/register</loc>
+  </url>
+
+  <url>
+    <loc>https://decodelocal.com/security/changepassword</loc>
+  </url>
+
+  <url>
+    <loc>https://decodelocal.com/security/externallogin</loc>
+  </url>
+
+  <url>
+    <loc>https://decodelocal.com/about/privacypolicy</loc>
+  </url>
+
+  <url>
+    <loc>https://decodelocal.com/about/termsandconditions</loc>
+  </url>
+</urlset>

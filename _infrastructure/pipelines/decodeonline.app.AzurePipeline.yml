@@ -1,0 +1,120 @@
+# Web Pipeline (Hybrid Static and Server Generation Next.js)
+variables:
+- group: YourVarGroup
+
+trigger:
+- master
+
+pool:
+  name: YourAgentPool
+
+stages:
+- stage: Build
+  displayName: Build
+  jobs:  
+  - job: Build
+    displayName: Build
+    steps:        
+    - task: npmAuthenticate@0
+      inputs:
+        workingFile: '.npmrc'
+    - task: NodeTool@0      
+      inputs:
+        versionSource: 'spec'
+        versionSpec: '20.9.0'
+      displayName: 'Install Node.js'    
+    # - task: Cache@2
+    #   displayName: 'Cache .next/cache'
+    #   inputs:
+    #     key: package-lock.json
+    #     path: $(npm_config_cache)
+    - script: |        
+        npm install
+        npm run build --if-present
+        npm run test --if-present      
+      timeoutInMinutes: 120
+      displayName: 'Install, build and test'
+    - task: ArchiveFiles@2
+      displayName: 'Archive'
+      inputs:
+        rootFolderOrFile: '$(System.DefaultWorkingDirectory)'
+        includeRootFolder: false
+        verbose: true
+        archiveType: zip
+        archiveFile: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
+        replaceExistingArchive: true
+    - upload: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
+      artifact: drop      
+- stage: Deploy
+  displayName: Deploy
+  dependsOn: Build
+  condition: succeeded()
+  jobs:
+  - deployment: VMDeploy
+    displayName: VMDeploy
+    environment:
+      name:  $(environment_name)
+      resourceType: VirtualMachine
+    strategy:
+     runOnce:
+      deploy:
+        steps:
+        - task: Bash@3
+          displayName: Init Script
+          inputs:
+            targetType: 'inline'
+            script: |
+              echo "Deploying..."
+        - task: Bash@3
+          displayName: Install zip
+          inputs:
+            targetType: 'inline'
+            script: |
+              sudo apt-get -y install zip
+        - download: current
+          artifact: drop    
+        - task: ExtractFiles@1
+          displayName: 'Extract'
+          inputs:
+            cleanDestinationFolder: false
+            overwriteExistingFiles: true            
+            archiveFilePatterns: "$(Pipeline.Workspace)/drop/$(Build.BuildId).zip"
+            destinationFolder: "$(Pipeline.Workspace)/apps/web/$(Build.BuildId)/"           
+      on:
+        failure:
+          steps:
+          - task: Bash@3
+            displayName: On Failure 
+            inputs:
+              targetType: 'inline'
+              script: |
+                echo "Deployment failed"
+        success:
+          steps:
+          - task: Bash@3
+            displayName: On Success
+            inputs:
+              targetType: 'inline'
+              script: |
+                echo "Deployment for Build: $(Build.BuildId) succeeded"                      
+          - task: Bash@3
+            timeoutInMinutes: 120
+            displayName: RunWebScript
+            inputs:
+              targetType: 'filepath'
+              filepath: $(Pipeline.Workspace)/apps/web/$(Build.BuildId)/_infrastructure/azure/start-web.sh 
+              arguments: >
+                $(Pipeline.Workspace)/apps/web/$(Build.BuildId) 
+                $(Pipeline.Workspace)/apps                
+                $(Build.BuildId)
+
+          - task: Bash@3
+            displayName: CleanUp
+            inputs:
+              targetType: 'filepath'
+              filepath: $(Pipeline.Workspace)/apps/web/$(Build.BuildId)/_infrastructure/azure/clean-up-after-cd.sh 
+              arguments: >
+                $(Pipeline.Workspace)/apps/web/$(Build.BuildId) 
+                $(Pipeline.Workspace)/apps                
+                $(Build.BuildId)
+                $(Pipeline.Workspace)/drop/$(Build.BuildId).zip

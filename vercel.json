@@ -1,0 +1,13 @@
+{
+  "env": {
+    "SECRET_COOKIE_PASSWORD": "YourCookiePassword"
+  },
+  "build": {
+    "env": {
+      "SECRET_COOKIE_PASSWORD": "YourCookiePassword"
+    }
+  },
+  "github": {
+    "silent": true
+  }
+}

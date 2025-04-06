@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">14.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <Name>web</Name>
+    <RootNamespace>web</RootNamespace>
+    <LaunchUrl>https://decodeonline.local:3000</LaunchUrl>
+    <SaveNodeJsSettingsInProjectFile>True</SaveNodeJsSettingsInProjectFile>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0883698b-2c37-46b6-8cc0-a22acab6d9ab}</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>npm run dev</StartupFile>
+    <StartWebBrowser>True</StartWebBrowser>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+    <NodejsPort>3000</NodejsPort>
+    <EnableTypeScript>true</EnableTypeScript>
+    <StartWebBrowser>True</StartWebBrowser>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include=".env.development" />
+    <Content Include=".env.local" />
+    <Content Include=".env.production" />
+    <Content Include=".gitignore" />
+    <Content Include=".next\cache\.tsbuildinfo" />
+    <Content Include=".next\cache\images\abSXgCKc+EzFMkVwcYHFgZ5BgmAOe+Skj9FIi4cs4V4=\60.1676673063980.aDqPDqlq7pXInmM3lFf0gOt5dNajZP9BnncEzkisIM4=.png" />
+    <Content Include=".next\cache\images\QRnhtMDCS7s3YgghnKUUQSh6Redl7TGMK5NLuTmkQKU=\60.1679708095195.OHIvcc2fKdiPWXJ0datSKgMYbndHnX2aI-oFAo51J2w=.webp" />
+    <Content Include=".next\cache\images\TI+oUa2nlSGo-I7p9A+XqGm1qxRxBIcD4lZNXiVmEBU=\60.1674159941393.NmckTwfbvbw5eCJCY3w4-NyMVqdeHLQH9JcocSwKYQA=.webp" />
+    <Content Include=".next\cache\images\tRANFQBMdoQ+DcvtQR1+Q+iT2yplINrs0tLoDkqvF7g=\300.1674160181602.Q-qZcFmHgTUk93ghH78gyoXjq9HPKZCvArdoJjtWkWw=.webp" />
+    <Content Include=".next\cache\images\ZiseQBmr6quKj6u7sbpLBZRHaX271ZnSnWHS8TNSNB0=\60.1673900252579.IofeMBpge91tH2ERqUNq3Kic1M5Pfeg8kyTpnyBwYvo=.png" />
+    <Content Include=".next\cache\next-server.js.nft.json" />
+    <Content Include=".next\cache\webpack\client-development-fallback\0.pack" />
+    <Content Include=".next\cache\webpack\client-development-fallback\1.pack" />
+    <Content Include=".next\cache\webpack\client-development-fallback\2.pack" />
+    <Content Include=".next\cache\webpack\client-development-fallback\3.pack" />
+    <Content Include=".next\cache\webpack\client-development-fallback\4.pack" />
+    <Content Include=".next\cache\webpack\client-development-fallback\index.pack" />
+    <Content Include=".next\cache\webpack\client-development-fallback\index.pack.old" />
+    <Content Include=".next\cache\webpack\client-development\0.pack" />
+    <Content Include=".next\cache\webpack\client-development\1.pack" />
+    <Content Include=".next\cache\webpack\client-development\10.pack" />
+    <Content Include=".next\cache\webpack\client-development\11.pack" />
+    <Content Include=".next\cache\webpack\client-development\12.pack" />
+    <Content Include=".next\cache\webpack\client-development\13.pack" />
+    <Content Include=".next\cache\webpack\client-development\14.pack" />
+    <Content Include=".next\cache\webpack\client-development\15.pack" />
+    <Content Include=".next\cache\webpack\client-development\16.pack" />
+    <Content Include=".next\cache\webpack\client-development\17.pack" />
+    <Content Include=".next\cache\webpack\client-development\18.pack" />
+    <Content Include=".next\cache\webpack\client-development\19.pack" />
+    <Content Include=".next\cache\webpack\client-development\2.pack" />
+    <Content Include=".next\cache\webpack\client-development\20.pack" />
+    <Content Include=".next\cache\webpack\client-development\21.pack" />
+    <Content Include=".next\cache\webpack\client-development\22.pack" />
+    <Content Include=".next\cache\webpack\client-development\23.pack" />
+    <Content Include=".next\cache\webpack\client-development\24.pack" />
+    <Content Include=".next\cache\webpack\client-development\25.pack" />
+    <Content Include=".next\cache\webpack\client-development\26.pack" />
+    <Content Include=".next\cache\webpack\client-development\3.pack" />
+    <Content Include=".next\cache\webpack\client-development\4.pack" />
+    <Content Include=".next\cache\webpack\client-development\5.pack" />
+    <Content Include=".next\cache\webpack\client-development\6.pack" />
+    <Content Include=".next\cache\webpack\client-development\7.pack" />
+    <Content Include=".next\cache\webpack\client-development\8.pack" />
+    <Content Include=".next\cache\webpack\client-development\9.pack" />
+    <Content Include=".next\cache\webpack\client-development\index.pack" />
+    <Content Include=".next\cache\webpack\client-development\index.pack.old" />
+    <Content Include=".next\cache\webpack\client-production\0.pack" />
+    <Content Include=".next\cache\webpack\client-production\1.pack" />
+    <Content Include=".next\cache\webpack\client-production\10.pack" />
+    <Content Include=".next\cache\webpack\client-production\11.pack" />
+    <Content Include=".next\cache\webpack\client-production\12.pack" />
+    <Content Include=".next\cache\webpack\client-production\13.pack" />
+    <Content Include=".next\cache\webpack\client-production\14.pack" />
+    <Content Include=".next\cache\webpack\client-production\15.pack" />
+    <Content Include=".next\cache\webpack\client-production\16.pack" />
+    <Content Include=".next\cache\webpack\client-production\17.pack" />
+    <Content Include=".next\cache\webpack\client-production\18.pack" />
+    <Content Include=".next\cache\webpack\client-production\19.pack" />
+    <Content Include=".next\cache\webpack\client-production\2.pack" />
+    <Content Include=".next\cache\webpack\client-production\20.pack" />
+    <Content Include=".next\cache\webpack\client-production\21.pack" />
+    <Content Include=".next\cache\webpack\client-production\22.pack" />
+    <Content Include=".next\cache\webpack\client-production\23.pack" />
+    <Content Include=".next\cache\webpack\client-production\24.pack" />
+    <Content Include=".next\cache\webpack\client-production\25.pack" />
+    <Content Include=".next\cache\webpack\client-production\26.pack" />
+    <Content Include=".next\cache\webpack\client-production\27.pack" />
+    <Content Include=".next\cache\webpack\client-production\28.pack" />
+    <Content Include=".next\cache\webpack\client-production\3.pack" />
+    <Content Include=".next\cache\webpack\client-production\4.pack" />
+    <Content Include=".next\cache\webpack\client-production\5.pack" />
+    <Content Include=".next\cache\webpack\client-production\6.pack" />
+    <Content Include=".next\cache\webpack\client-production\7.pack" />
+    <Content Include=".next\cache\webpack\client-production\8.pack" />
+    <Content Include=".next\cache\webpack\client-production\9.pack" />
+    <Content Include=".next\cache\webpack\client-production\index.pack" />
+    <Content Include=".next\cache\webpack\client-production\index.pack.old" />
+    <Content Include=".next\cache\webpack\edge-server-development\0.pack" />
+    <Content Include=".next\cache\webpack\edge-server-development\1.pack" />
+    <Content Include=".next\cache\webpack\edge-server-development\2.pack" />
+    <Content Include=".next\cache\webpack\edge-server-development\3.pack" />
+    <Content Include=".next\cache\webpack\edge-server-development\4.pack" />
+    <Content Include=".next\cache\webpack\edge-server-development\5.pack" />
+    <Content Include=".next\cache\webpack\edge-server-development\6.pack" />
+    <Content Include=".next\cache\webpack\edge-server-development\index.pack" />
+    <Content Include=".next\cache\webpack\edge-server-development\index.pack.old" />
+    <Content Include=".next\cache\webpack\edge-server-production\0.pack" />
+    <Content Include=".next\cache\webpack\edge-server-production\1.pack" />
+    <Content Include=".next\cache\webpack\edge-server-production\2.pack" />
+    <Content Include=".next\cache\webpack\edge-server-production\3.pack" />
+    <Content Include=".next\cache\webpack\edge-server-production\4.pack" />
+    <Content Include=".next\cache\webpack\edge-server-production\5.pack" />
+    <Content Include=".next\cache\webpack\edge-server-production\6.pack" />
+    <Content Include=".next\cache\webpack\edge-server-production\index.pack" />
+    <Content Include=".next\cache\webpack\edge-server-production\index.pack.old" />
+    <Content Include=".next\cache\webpack\server-development\0.pack" />
+    <Content Include=".next\cache\webpack\server-development\1.pack" />
+    <Content Include=".next\cache\webpack\server-development\10.pack" />
+    <Content Include=".next\cache\webpack\server-development\11.pack" />
+    <Content Include=".next\cache\webpack\server-development\12.pack" />
+    <Content Include=".next\cache\webpack\server-development\13.pack" />
+    <Content Include=".next\cache\webpack\server-development\14.pack" />
+    <Content Include=".next\cache\webpack\server-development\15.pack" />
+    <Content Include=".next\cache\webpack\server-development\16.pack" />
+    <Content Include=".next\cache\webpack\server-development\17.pack" />
+    <Content Include=".next\cache\webpack\server-development\18.pack" />
+    <Content Include=".next\cache\webpack\server-development\19.pack" />
+    <Content Include=".next\cache\webpack\server-development\2.pack" />
+    <Content Include=".next\cache\webpack\server-development\20.pack" />
+    <Content Include=".next\cache\webpack\server-development\3.pack" />
+    <Content Include=".next\cache\webpack\server-development\4.pack" />
+    <Content Include=".next\cache\webpack\server-development\5.pack" />
+    <Content Include=".next\cache\webpack\server-development\6.pack" />
+    <Content Include=".next\cache\webpack\server-development\7.pack" />
+    <Content Include=".next\cache\webpack\server-development\8.pack" />
+    <Content Include=".next\cache\webpack\server-development\9.pack" />
+    <Content Include=".next\cache\webpack\server-development\index.pack" />
+    <Content Include=".next\cache\webpack\server-development\index.pack.old" />
+    <Content Include=".next\cache\webpack\server-production\0.pack" />
+    <Content Include=".next\cache\webpack\server-production\1.pack" />
+    <Content Include=".next\cache\webpack\server-production\10.pack" />
+    <Content Include=".next\cache\webpack\server-production\11.pack" />
+    <Content Include=".next\cache\webpack\server-production\12.pack" />
+    <Content Include=".next\cache\webpack\server-production\13.pack" />
+    <Content Include=".next\cache\webpack\server-production\14.pack" />
+    <Content Include=".next\cache\webpack\server-production\15.pack" />
+    <Content Include=".next\cache\webpack\server-production\16.pack" />
+    <Content Include=".next\cache\webpack\server-production\2.pack" />
+    <Content Include=".next\cache\webpack\server-production\3.pack" />
+    <Content Include=".next\cache\webpack\server-production\4.pack" />
+    <Content Include=".next\cache\webpack\server-production\5.pack" />
+    <Content Include=".next\cache\webpack\server-production\6.pack" />
+    <Content Include=".next\cache\webpack\server-production\7.pack" />
+    <Content Include=".next\cache\webpack\server-production\8.pack" />
+    <Content Include=".next\cache\webpack\server-production\9.pack" />
+    <Content Include=".next\cache\webpack\server-production\index.pack" />
+    <Content Include=".next\cache\webpack\server-production\index.pack.old" />
+    <Content Include=".next\package.json" />
+    <Content Include=".next\routes-manifest.json" />
+    <Content Include=".next\server\chunks\121.js" />
+    <Content Include=".next\server\chunks\17.js" />
+    <Content Include=".next\server\chunks\29.js" />
+    <Content Include=".next\server\chunks\675.js" />
+    <Content Include=".next\server\chunks\859.js" />
+    <Content Include=".next\server\chunks\font-manifest.json" />
+    <Content Include=".next\server\edge-runtime-webpack.js" />
+    <Content Include=".next\server\edge-runtime-webpack.js.map" />
+    <Content Include=".next\server\font-manifest.json" />
+    <Content Include=".next\server\middleware-manifest.json" />
+    <Content Include=".next\server\middleware.js" />
+    <Content Include=".next\server\middleware.js.map" />
+    <Content Include=".next\server\pages-manifest.json" />
+    <Content Include=".next\server\pages\authentication\login.js" />
+    <Content Include=".next\server\pages\authentication\login.js.nft.json" />
+    <Content Include=".next\server\pages\authentication\register.js" />
+    <Content Include=".next\server\pages\authentication\register.js.nft.json" />
+    <Content Include=".next\server\pages\index.js" />
+    <Content Include=".next\server\pages\index.js.nft.json" />
+    <Content Include=".next\server\pages\user\profile.js" />
+    <Content Include=".next\server\pages\user\profile.js.nft.json" />
+    <Content Include=".next\server\pages\_app.js" />
+    <Content Include=".next\server\pages\_app.js.nft.json" />
+    <Content Include=".next\server\pages\_document.js" />
+    <Content Include=".next\server\pages\_document.js.nft.json" />
+    <Content Include=".next\server\pages\_error.js" />
+    <Content Include=".next\server\pages\_error.js.nft.json" />
+    <Content Include=".next\server\webpack-runtime.js" />
+    <Content Include=".vscode\settings.json" />
+    <Content Include=".vs\slnx.sqlite" />
+    <Content Include=".vs\VSWorkspaceState.json" />
+    <Content Include=".vs\web\FileContentIndex\1d285227-8bc3-4230-9bc1-da14fc8da90e.vsidx" />
+    <Content Include=".vs\web\FileContentIndex\42cf87d9-9a15-4220-afb9-736e089913b2.vsidx" />
+    <Content Include=".vs\web\FileContentIndex\5d3b1d0a-737f-457c-8cc0-244385aaf510.vsidx" />
+    <Content Include=".vs\web\FileContentIndex\b208c15c-460b-4881-afba-558853654ed1.vsidx" />
+    <Content Include=".vs\web\FileContentIndex\read.lock" />
+    <Content Include="bin\Microsoft.NodejsTools.WebRole.dll" />
+    <Content Include="lib\localisation\README.md" />
+    <Content Include="next.config.js" />
+    <Content Include="obj\Debug\web.njsproj.AssemblyReference.cache" />
+    <Content Include="obj\Debug\web.njsproj.AssemblyReference.cache" />
+    <Content Include="obj\Release\web.njsproj.AssemblyReference.cache" />
+    <Content Include="obj\Release\web.njsproj.AssemblyReference.cache" />
+    <Content Include="package-lock.json" />
+    <Content Include="pages\_document.js" />
+    <Content Include="public\favicon.ico" />
+    <Content Include="public\GitHub-Mark-32px.png" />
+    <Content Include="public\GitHub-Mark-Light-32px.png" />
+    <Content Include="public\styles\Reset.scss" />
+    <Content Include="public\styles\Syles.scss" />
+    <Content Include="public\styles\variables.scss" />
+    <Content Include="tsconfig.json" />
+    <Content Include="package.json" />
+    <Content Include="README.md" />
+    <Content Include="vercel.json" />
+    <Content Include="web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include=".next\" />
+    <Folder Include=".next\cache\" />
+    <Folder Include=".next\cache\images\" />
+    <Folder Include=".next\cache\images\abSXgCKc+EzFMkVwcYHFgZ5BgmAOe+Skj9FIi4cs4V4=\" />
+    <Folder Include=".next\cache\images\QRnhtMDCS7s3YgghnKUUQSh6Redl7TGMK5NLuTmkQKU=\" />
+    <Folder Include=".next\cache\images\TI+oUa2nlSGo-I7p9A+XqGm1qxRxBIcD4lZNXiVmEBU=\" />
+    <Folder Include=".next\cache\images\tRANFQBMdoQ+DcvtQR1+Q+iT2yplINrs0tLoDkqvF7g=\" />
+    <Folder Include=".next\cache\images\ZiseQBmr6quKj6u7sbpLBZRHaX271ZnSnWHS8TNSNB0=\" />
+    <Folder Include=".next\cache\swc\" />
+    <Folder Include=".next\cache\swc\plugins\" />
+    <Folder Include=".next\cache\swc\plugins\v4\" />
+    <Folder Include=".next\cache\webpack\" />
+    <Folder Include=".next\cache\webpack\client-development-fallback\" />
+    <Folder Include=".next\cache\webpack\client-development\" />
+    <Folder Include=".next\cache\webpack\client-production\" />
+    <Folder Include=".next\cache\webpack\edge-server-development\" />
+    <Folder Include=".next\cache\webpack\edge-server-production\" />
+    <Folder Include=".next\cache\webpack\server-development\" />
+    <Folder Include=".next\cache\webpack\server-production\" />
+    <Folder Include=".next\server\" />
+    <Folder Include=".next\server\chunks\" />
+    <Folder Include=".next\server\pages\" />
+    <Folder Include=".next\server\pages\authentication\" />
+    <Folder Include=".next\server\pages\user\" />
+    <Folder Include=".vscode\" />
+    <Folder Include=".vs\" />
+    <Folder Include=".vs\web\" />
+    <Folder Include=".vs\web\FileContentIndex\" />
+    <Folder Include=".vs\web\FileContentIndex\merges\" />
+    <Folder Include=".vs\web\v17\" />
+    <Folder Include="bin\" />
+    <Folder Include="components\" />
+    <Folder Include="lib\" />
+    <Folder Include="lib\contexts\" />
+    <Folder Include="lib\hooks\" />
+    <Folder Include="lib\localisation\" />
+    <Folder Include="lib\types\" />
+    <Folder Include="lib\utils\" />
+    <Folder Include="obj\" />
+    <Folder Include="obj\Debug\" />
+    <Folder Include="obj\Release\" />
+    <Folder Include="pages\" />
+    <Folder Include="pages\authentication\" />
+    <Folder Include="pages\user\" />
+    <Folder Include="public\" />
+    <Folder Include="public\fonts\" />
+    <Folder Include="public\images\" />
+    <Folder Include="public\styles\" />
+    <Folder Include="public\videos\" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="components\CountrySelect.tsx" />
+    <TypeScriptCompile Include="components\ErrorBoundary.tsx" />
+    <TypeScriptCompile Include="components\Form.tsx" />
+    <TypeScriptCompile Include="components\index.ts" />
+    <TypeScriptCompile Include="components\Layout.tsx" />
+    <TypeScriptCompile Include="components\LayoutFooter.tsx" />
+    <TypeScriptCompile Include="components\LayoutHeader.tsx" />
+    <TypeScriptCompile Include="components\LayoutMain.tsx" />
+    <TypeScriptCompile Include="components\LoginComponent.tsx" />
+    <TypeScriptCompile Include="components\RegisterComponent.tsx" />
+    <TypeScriptCompile Include="lib\contexts\index.ts" />
+    <TypeScriptCompile Include="lib\contexts\ThemeContext.ts" />
+    <TypeScriptCompile Include="lib\hooks\index.ts" />
+    <TypeScriptCompile Include="lib\hooks\UseUserProfile.ts" />
+    <TypeScriptCompile Include="lib\index.ts" />
+    <TypeScriptCompile Include="lib\localisation\Copy.ts" />
+    <TypeScriptCompile Include="lib\localisation\Copy_en_web.ts" />
+    <TypeScriptCompile Include="lib\localisation\Copy_fr_web.ts" />
+    <TypeScriptCompile Include="lib\localisation\Copy_pa_web.ts" />
+    <TypeScriptCompile Include="lib\localisation\index.ts" />
+    <TypeScriptCompile Include="lib\localisation\Lookups.ts" />
+    <TypeScriptCompile Include="lib\localisation\Lookups_en_web.ts" />
+    <TypeScriptCompile Include="lib\localisation\Lookups_fr_web.ts" />
+    <TypeScriptCompile Include="lib\localisation\Lookups_pa_web.ts" />
+    <TypeScriptCompile Include="lib\types\index.ts" />
+    <TypeScriptCompile Include="lib\utils\HTTPUtility.ts" />
+    <TypeScriptCompile Include="lib\utils\index.ts" />
+    <TypeScriptCompile Include="lib\utils\LocalisationUtility.ts" />
+    <TypeScriptCompile Include="middleware.ts" />
+    <TypeScriptCompile Include="next-env.d.ts" />
+    <TypeScriptCompile Include="pages\authentication\login.tsx" />
+    <TypeScriptCompile Include="pages\authentication\register.tsx" />
+    <TypeScriptCompile Include="pages\index.tsx" />
+    <TypeScriptCompile Include="pages\user\profile.tsx" />
+  </ItemGroup>
+  <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:48022/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost:1337</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

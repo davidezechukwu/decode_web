@@ -1,0 +1,18 @@
+// Compatible with @progress/kendo-theme-classic v.6.4.0
+
+%tb-typography {
+  @include typography-classes($tb-typography);
+}
+
+%tb-effects {
+  @include effects-classes($tb-effects);
+}
+
+    .k-expander .k-expander-header .k-expander-title{
+        color: $tb-kendo-body-text;
+        
+}
+    .k-expander.k-expanded .k-expander-header .k-expander-title{
+        color: $tb-kendo-base-text;
+        
+}

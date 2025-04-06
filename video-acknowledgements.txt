@@ -1,0 +1,93 @@
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDfn/GIbu5IjFVer2MXNQwlVrknk/B0MfFwIX1KPiC3uZ5JCDGxjXlFL3rKIxIIDGyYApz0Q5bqwqn/tZlImXONk6r2LppnVDUJKVoqZwcTHV2fXD+9be4GADZmfutMq277HR7MWVhHJzNFVhS76FYL4JukSxhYbf4zOakBZpNp4Hz/spHFoX5tKMz5IhiM+jg0rief3WY/lcnVUubs/N8QJQAFFt0QIaTTF5IKCj4tOuUveHo/4RgHrq8iDzDDjb44ykMQWzkNAByYwmDC34rAwzUU1+FyYdvB1embt+3C9MXS3YGQ6/FI5AckY9ibqg9pdTzdM+1r6Y2XWxrgu1Xfq7ThWRXiNHPUDisgbNpNHrcrzOk/ZeminRtKizAPd6Ow5e3a5NhX/uStYYrbhV2z+cfbFx/ATvfDfgeTkOHROXy0XZSszGMaVnQXMyYj+tJ/0BDLElH/H7UV+ubyYZIX6Ofnb5JXwMFfsG1EMm7MwzdBa3vWodnG5F4Ca3JzzYc= davidezechukwu@garzin.uk
+
+
+
+~/$ mkdir buildagent && cd buildagent
+~/buildagent$ tar zxvf ~/Downloads/vsts-agent-linux-x64-3.232.3.tar.gz
+
+ssh -i F:/garzin/garzin-vm.key garzin-admin@20.0.91.109
+
+
+https://garzin.uk.s3.Region.amazonaws.com/Z2EQ8O63LJ6YUB
+
+
+Credits
+
+1
+https://www.pexels.com/video/946147/
+
+https://www.paypal.com/donate/?business=c.r.arribas%40gmail.com&cmd=_donations&currency_code=USD&item_name=Carlos+Arribas+-+Pexels&item_number=https%3A%2F%2Fwww.pexels.com%2Fvideo%2F946147%2F&lc=US&notify_url=https%3A%2F%2Fwww.pexels.com%2Fcallback%2Fdonation%2Fpaypal%2F27681%2F%3Ftoken%3DbWVkaXVtX2lkPTk0NjE0NyZub25jZT11RFR4YUZJN1hUR3hWWDFyMFhZVDZBJnNlbmRlcl9pZD0%253D&return=https://pexels.com/search/videos/technology/
+
+
+https://twitter.com/godronesoficial
+Video by Nino Souza: https://www.pexels.com/video/person-editing-some-videos-1536322/
+
+
+Video by Stefan Kwiecinski: https://www.pexels.com/video/touch-pad-979655/
+Video by fauxels: https://www.pexels.com/video/group-of-people-having-a-meeting-3249940/
+Video by Steve B: https://www.pexels.com/video/close-up-footage-of-an-electronic-circuit-board-3866849/
+Video by cottonbro studio: https://www.pexels.com/video/a-man-and-a-woman-having-a-discussion-2795164/
+Video by fauxels: https://www.pexels.com/video/a-group-of-people-standing-side-by-side-with-one-another-are-busy-using-their-cellular-phones-3252019/
+Video by fauxels: https://www.pexels.com/video/busy-woman-working-with-her-laptop-and-smartphone-3251808/
+Video by cottonbro studio: https://www.pexels.com/video/laptop-typing-macbook-business-4115283/
+Video by fauxels: https://www.pexels.com/video/group-of-people-sharing-ideas-at-work-3252291/
+Video by cottonbro studio: https://www.pexels.com/video/a-human-hand-touching-prosthetic-arm-6153453/
+Video by Andrey Kirievskiy: https://www.pexels.com/video/close-up-footage-of-medical-equipment-used-in-hospitals-3197670/
+Video by Andrey Kirievskiy: https://www.pexels.com/video/a-hospital-with-modern-equipment-use-on-patients-3197634/
+Video by Andrey Kirievskiy: https://www.pexels.com/video/a-hospital-with-modern-equipment-use-on-patients-3197634/
+Video by fauxels: https://www.pexels.com/video/asking-and-giving-suggestions-3252425/
+Video by Edward Jenner: https://www.pexels.com/video/video-of-female-chemist-looking-through-microscope-4121618/
+Video by Oscar Rojas: https://www.pexels.com/video/a-person-using-a-smart-cellular-phone-3143531/
+Video by Foysal Ahmed: https://www.pexels.com/video/smartphone-mobile-phone-mobile-cell-phone-4201543/
+Video by KATRIN  BOLOVTSOVA: https://www.pexels.com/video/man-using-a-computer-laptop-4052881/
+Video by KATRIN  BOLOVTSOVA: https://www.pexels.com/video/man-using-a-computer-laptop-4052881/
+Video by cottonbro studio: https://www.pexels.com/video/light-man-apple-iphone-4034126/
+Video by Gustavo Fring: https://www.pexels.com/video/a-woman-talking-via-video-call-with-her-phone-set-on-a-stand-4022723/
+Video by fauxels: https://www.pexels.com/video/a-person-scrolling-down-photos-stored-in-an-electronic-smart-pad-3252342/
+Video by cottonbro studio: https://www.pexels.com/video/sitting-technology-computer-young-4709299/
+Video by Andrey Kirievskiy: https://www.pexels.com/video/doctors-looking-at-a-monitor-for-guide-in-a-surgical-procedure-3197629/
+Video by cottonbro studio: https://www.pexels.com/video/hands-iphone-internet-technology-5082599/
+Video by Tony Schnagl: https://www.pexels.com/video/a-young-man-busy-typing-on-his-laptop-5528015/
+Video by cottonbro studio: https://www.pexels.com/video/hands-iphone-laptop-macbook-pro-5076636/
+Video by cottonbro studio: https://www.pexels.com/video/a-woman-working-at-home-with-a-laptop-5076639/
+Video by Anna Nekrashevich: https://www.pexels.com/video/businessman-man-person-desk-6799747/
+Video by Kindel Media: https://www.pexels.com/video/men-and-women-in-a-business-meeting-6774385/
+Video by Kindel Media: https://www.pexels.com/video/men-and-women-in-a-business-meeting-6774385/
+Video by MART  PRODUCTION: https://www.pexels.com/video/a-pregnant-woman-undergoing-ultrasound-procedure-7089367/
+Video by MART  PRODUCTION: https://www.pexels.com/video/a-pregnant-woman-undergoing-ultrasound-procedure-7089367/
+Video by Tima Miroshnichenko: https://www.pexels.com/video/woman-and-man-working-using-digital-tablet-7579950/
+Video by Kindel Media: https://www.pexels.com/video/a-group-of-people-in-a-business-meeting-6774383/
+Video by Tima Miroshnichenko: https://www.pexels.com/video/people-in-front-of-computer-counting-money-6266249/
+Video by Tima Miroshnichenko: https://www.pexels.com/video/a-multicultural-group-working-in-a-call-center-5452722/
+Video by fauxels: https://www.pexels.com/video/a-group-of-people-are-seated-and-busy-doing-their-work-3255156/
+Video by Free Videos: https://www.pexels.com/video/hand-on-a-computer-mouse-853769/
+Video by Pressmaster: https://www.pexels.com/video/digital-projection-of-geometrical-distance-of-earth-s-land-mass-end-points-3125427/
+Video by John Guccione www.advergroup.com: https://www.pexels.com/video/seo-web-design-search-google-4549682/
+Video by cottonbro studio: https://www.pexels.com/video/hands-office-working-internet-5083552/
+Video by cottonbro studio: https://www.pexels.com/video/businessman-man-office-working-5083548/
+Video by Sam Lion: https://www.pexels.com/video/a-woman-watching-videos-in-a-laptop-6000411/
+Video by TheTechGirl007: https://www.pexels.com/video/broken-inactive-video-link-11062245/
+Video by Matthias Groeneveld: https://www.pexels.com/video/playing-a-vinyl-record-on-a-spinning-turntable-2984380/
+Video by Ivan Samkov: https://www.pexels.com/video/people-discussing-chart-on-computer-screen-7252716/
+Video by cottonbro studio: https://www.pexels.com/video/kids-making-a-toy-tower-using-wooden-building-blocks-3677163/
+Video by Thirdman: https://www.pexels.com/video/people-working-together-in-office-7652724/
+Video by cottonbro studio: https://www.pexels.com/video/reading-the-pages-of-the-jewish-bible-5975317/
+Video by Mikhail Nilov: https://www.pexels.com/video/close-up-video-of-hands-using-braille-6964796/
+Video by Lara Jameson: https://www.pexels.com/video/flags-on-the-world-map-8828861/
+Video by MART  PRODUCTION: https://www.pexels.com/video/a-person-receiving-a-message-on-a-smartphone-7279035/
+Video by Lara Jameson: https://www.pexels.com/video/a-person-putting-mini-flags-of-countries-on-a-map-8828853/
+Video by Lara Jameson: https://www.pexels.com/video/person-rotating-the-globe-8829619/
+Video by Vlada Karpovich: https://www.pexels.com/video/woman-opening-a-paper-world-map-7429434/
+Video by Lara Jameson: https://www.pexels.com/video/people-pointing-continents-on-a-map-8829564/
+Video by Nathan J Hilton: https://www.pexels.com/video/iphone-on-a-desk-stand-hello-19162466/
+Video by RDNE Stock project: https://www.pexels.com/video/notification-on-a-phone-7821643/
+Video by Pavel Danilyuk: https://www.pexels.com/video/a-robot-playing-chess-8327801/
+Video by RDNE Stock project: https://www.pexels.com/video/notification-on-a-phone-7821643/
+Video by Ivan Samkov: https://www.pexels.com/video/person-writing-on-the-blackboard-7252932/
+Video by ROMAN ODINTSOV: https://www.pexels.com/video/alarm-on-a-smartphone-7592157/
+Video by Kindel Media: https://www.pexels.com/video/business-analytics-presentation-in-a-business-meeting-6774646/#
+Video by Google DeepMind: https://www.pexels.com/video/an-artist-s-animation-of-artificial-intelligence-ai-this-video-represents-how-ai-powered-tools-can-support-us-and-save-time-it-was-created-by-martina-stiftinger-as-part-of-the-visualis-18069233/
+Video by Google DeepMind: https://www.pexels.com/video/an-artist-s-animation-of-artificial-intelligence-ai-this-video-depicts-how-ai-could-assist-in-genomic-studies-and-its-applications-it-was-created-by-nidia-dias-as-part-of-the-visualisi-18069472/
+Video by Google DeepMind: https://www.pexels.com/video/an-artist-s-animation-of-artificial-intelligence-ai-this-video-represents-the-role-of-ai-in-computer-optimisation-for-reduced-energy-consumption-it-was-created-by-linus-zoll-as-part-of-18069093/
+Video by Boris Pavlikovsky: https://www.pexels.com/video/man-playing-a-violin-7508037/
+Video by Max Medyk: https://www.pexels.com/video/event-artificial-intelligence-18192389/

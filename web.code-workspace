@@ -1,0 +1,22 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"files.autoSave": "afterDelay",
+		"workbench.sideBar.location": "right",
+		"workbench.editorAssociations": {
+			"*.ipynb": "jupyter-notebook"
+		},
+		"notebook.cellToolbarLocation": {
+			"default": "right",
+			"jupyter-notebook": "left"
+		},
+		"workbench.editor.enablePreview": false,
+		"window.commandCenter": true,
+		"eslint.debug": true,
+		"workbench.editor.revealIfOpen": true
+	}
+}

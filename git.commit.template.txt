@@ -1,0 +1,25 @@
+NAME: [Ticket Name or Title]
+
+WHY:
+[First Commit]
+[Solutioning]
+[CI/CD]
+[TDD] 
+[Drafting]
+[Refactoring] 
+[Documentation] 
+[Instrumentation]
+[Performance Tuning]
+[Localisation]
+[Globalisation]
+[Feature Addition]
+[Typo Fix]
+[Bug Fix] 
+[Code Review Change] 
+[Technical Debt]
+
+TICKET:
+[URL of Ticket]
+
+INFO:
+[Optional longer description of what was changed, reasons for change, though far more details are available from the ticket URL]

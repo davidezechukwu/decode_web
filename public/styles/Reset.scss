@@ -1,0 +1,62 @@
+﻿// @import "../../node_modules/bootstrap/scss/bootstrap.scss";
+// @import 'variables.scss';
+
+//Extra small devices (portrait phones, typically less than 576px, set )
+//see https://getbootstrap.com/docs/5.0/layout/breakpoints/
+html {
+  font-size: 62.5%;
+}
+
+body {
+  vertical-align: baseline;
+  /*margin: 2rem;*/
+  /*font-size: 1.5rem;*/
+}
+
+h1{
+  vertical-align: baseline;
+  /*font-family: ????;*/
+  /*font-size: ????;*/
+  /* text-transform: capitalize; */
+}
+
+h2{
+  vertical-align: baseline;
+  /*font-family: ????;*/
+  /*font-size: ????;*/
+}
+
+h3 {
+  vertical-align: baseline;
+  /*font-family: ????;*/
+  /*font-size: ????;*/
+}
+
+h4{
+  vertical-align: baseline;
+  /*font-family: ????;*/
+  /*font-size: 2.5rem;*/
+}
+
+h5{
+  vertical-align: baseline;
+}
+
+h6 {
+  vertical-align: baseline;
+}
+
+a {
+  cursor: pointer;
+}
+
+/* everywhere else */
+* {
+  vertical-align: baseline;
+  /*font-family: ????;*/
+  /*font-size: ????;*/
+  // font-family: $pk-main-font-family;
+  
+}
+
+
